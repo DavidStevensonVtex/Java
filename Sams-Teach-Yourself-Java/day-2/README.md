@@ -109,3 +109,24 @@ A string in Java is an object rather than a primitive data type.
 Strings are not stored in arrays in Java.
 
 `String quitMsg = "Are you sture you want to quit?";`
+
+### Expressions and Operators
+
+An *expression* is a statement that can convey a value.
+
+```
+int x = 3;
+int y = x;
+int z = x * y;
+```
+
+The value convenyed by an expression is called a *return value*.
+
+#### Arithmetic
+
+Arithmetic operators
+* \+
+* \-
+* \*
+* \/
+* \% -Modulus
