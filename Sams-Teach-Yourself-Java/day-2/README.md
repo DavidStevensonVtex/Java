@@ -175,3 +175,9 @@ The XOR combination has one logical oiperator: ^. This results in a true value o
 the Boolean expressions it combines have opposite  values.
 
 The NOT combination uses the ! logical operator followed by a single expression.
+
+### Operator Precedence
+
+To change the order in which expressions are evaluated, place parentheses around the expressions that should be evaluated first.
+
+Parentheses also can improve an expression's readability.
