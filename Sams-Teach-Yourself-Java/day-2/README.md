@@ -158,3 +158,20 @@ x--;
 * \>
 * <=
 * \>=
+
+### Logical Operators
+
+AND, OR, XOR and logical NOT
+
+For AND combinations, the & or && logical operator is used.
+
+The difference between & and && lies in how much work Java does no the combined expression. If & is used, expressiosn on both sides of the & are evaluated no matter what. If && is used, and the left side is false, the expresion the right side of the && is never evaluated.
+
+For OR combinations, the | or || logical operator is used.
+These combined expressions return atrue value if either Boolean expression is true.
+Only if both of these expressions are false is the value false assigned.
+
+The XOR combination has one logical oiperator: ^. This results in a true value only if 
+the Boolean expressions it combines have opposite  values.
+
+The NOT combination uses the ! logical operator followed by a single expression.
