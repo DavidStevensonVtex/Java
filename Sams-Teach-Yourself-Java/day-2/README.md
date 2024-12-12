@@ -181,3 +181,9 @@ The NOT combination uses the ! logical operator followed by a single expression.
 To change the order in which expressions are evaluated, place parentheses around the expressions that should be evaluated first.
 
 Parentheses also can improve an expression's readability.
+
+### String Arithmetic
+
+The + operator can concatenate strings. Concatenate means to link or join two things.
+
+The + operator combines strings, other objects, and variables to form a single string.
