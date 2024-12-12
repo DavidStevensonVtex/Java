@@ -142,3 +142,10 @@ x -= y;
 x *= y;
 x /= y;
 ```
+
+### Incrementing and Decrementing
+
+```
+x++;
+x--;
+```
