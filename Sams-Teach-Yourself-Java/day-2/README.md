@@ -66,3 +66,46 @@ final float PI = 3.141592 ;
 final boolean DEBUG = false;
 final int PENALTY = 25 ;
 ```
+
+### Comments
+
+A single-line comment is preceded by two slash characters.
+
+A multiline comment begins with /* and ends with */.
+
+A Javadoc comment begins with /** and ends with */
+
+### Java Platform Standard Edition 7 Documentation
+
+[Java Platform Standard Edition 7 Documentation](https://docs.oracle.com/javase/7/docs/)
+
+### Literals
+
+A *literal* is any number, text, or other information that directly represents a value.
+
+#### Number Literals
+
+A literal that should be a long integer should have an uppercase L suffix.
+
+Floating point values for the `float` data type should have an uppercase F suffix.
+
+You can use exponents in floating-point literals by using the letter e or E.
+
+#### Boolean Literals
+
+*true* or *false*
+
+```boolean chosen = true;```
+
+#### Character Literals
+
+Character literals are expressed by a single character surrounded by single quotation marks, such as 'a', '#', and '3'.
+
+Character escape codes
+
+#### String Literals
+
+A string in Java is an object rather than a primitive data type.
+Strings are not stored in arrays in Java.
+
+`String quitMsg = "Are you sture you want to quit?";`
