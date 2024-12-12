@@ -130,3 +130,15 @@ Arithmetic operators
 * \*
 * \/
 * \% -Modulus
+
+### More About Assignment
+
+`x = y = z = 7;`
+
+Assignment Operators
+```
+x += y;
+x -= y;
+x *= y;
+x /= y;
+```
