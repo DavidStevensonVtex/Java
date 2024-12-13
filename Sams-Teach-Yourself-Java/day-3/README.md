@@ -234,5 +234,28 @@ System.out.println("Lower number: " + Math.min(f1, f2));
 The Math.min() method takes two float values as arguments, but the preceding example
 sends the method two Float objects as arguments instead.
 
-Flaot objects are automatically unboxed into float values before being sent to the min()
+Float objects are automatically unboxed into float values before being sent to the min()
 method.
+
+### Comparing Object Values and Classes
+
+Three other common tasks that involve objects:
+
+* Comparing objects
+* Finding out the class of any given object
+* Testing to see whther an object is an instance of a given class
+
+#### Comparing Objects
+
+Most of these operators (==, !=, <, >, etc) work on primitives but not objects.
+
+The exceptions to this rule are the == operator for equality and the != operator for inequality.
+
+To compare objects of a class and have meaningful results, you must implement special 
+methods in your class and call those methods.
+
+A good example of this is the String class. It is possible to have two different String 
+objects that represent the same text. If you were to employ the == operator to compare
+these objects, however, they would be considered unequal. Although their contents match,
+they are not the same object.
+
