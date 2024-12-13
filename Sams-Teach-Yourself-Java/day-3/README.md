@@ -93,3 +93,22 @@ Calling a method in an object also makes use of dot notation.
 
 `customer.cancelOrder()`
 
+#### Formatting Strings
+
+Numbers such as money often need to be displayed in a precise manner.
+
+`System.out.format()`
+
+```
+int accountBalance = 5005;
+System.out.format("Balance: $%,d%n", accountBalance);
+```
+
+Output: `Balance: $5,005`
+
+```
+double pi = Math.PI;
+System.out.format("%.11f%n", pi);
+```
+
+The output is 3.14159265359
