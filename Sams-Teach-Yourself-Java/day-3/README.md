@@ -259,3 +259,20 @@ objects that represent the same text. If you were to employ the == operator to c
 these objects, however, they would be considered unequal. Although their contents match,
 they are not the same object.
 
+### Determining the Class of an Object
+
+`String name = key.getClass().getName()`
+
+The `getClass() method is defined in the Object class, so it can be called in objects.
+It returns a Class object that represents the object's class. That object's getName()
+method returns a string holding the name of the class.
+
+Another useful test is the `instanceof` operator, which has two operands: a reference to an objet
+on the left, and a class name on the right.
+
+```
+boolean check1 "Texas" instance of String;  // true
+
+Point pt = new Point(10,10);
+boolean check2 = pt instanceof String;  // false
+```
