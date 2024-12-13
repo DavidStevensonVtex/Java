@@ -151,7 +151,7 @@ s2 will have the value of "550".
 
 A *reference* is an address that indicates where the object's variables and methods are stored.
 
-#### Casting Objects and Primitive Types
+### Casting Objects and Primitive Types
 
 You must use variables of the correct data types.
 
@@ -166,4 +166,20 @@ Three types of casts and conversions:
 * Casting between primitive types
 * Casting from an object of a class to an object of another class
 * Casting primitive types to objects, and then extracting primitive values from those objects
+
+#### Casting Primitve Types
+
+Casting between primitive types enables you to convert the value of one type to another primitive type.
+This most commonly occurs with the numeric types.
+
+You can automatically use a `byte` or `char` as an `int`; you can use an int as a long,
+an int as a float, or any numeric value as a double. In these cases, no loss of information
+occurs.
+
+Cast an int or a long into a float, or a long to a double can cause some loss of precision.
+
+You must use an explicit cast to convert a value in a large type to a smaller type. Explicit
+casts take the following form:
+
+`(typename) value`
 
