@@ -66,7 +66,7 @@ instance or class variable name has two parts:
 Class variables are variables defined and stored in the class itself.
 Their values apply to the class and all its instances.
 
-Each isntance can change the values of those instance variables without 
+Each instance can change the values of those instance variables without 
 affecting any other instances.
 
 ```
@@ -112,3 +112,17 @@ System.out.format("%.11f%n", pi);
 ```
 
 The output is 3.14159265359
+
+#### Nesting Method Calls
+
+A method can return a reference to an object, a primitive data type, or no value at all.
+
+```
+String label = "From" ;
+String upper = label.toUpperCcase();
+```
+
+If the cancelOrder() method returns an object, you can call methods of that object in the same statement:
+
+`customer.cancelOrder().fileComplaint()`
+
