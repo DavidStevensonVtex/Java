@@ -150,3 +150,20 @@ s2 will have the value of "550".
 #### References to Objects
 
 A *reference* is an address that indicates where the object's variables and methods are stored.
+
+#### Casting Objects and Primitive Types
+
+You must use variables of the correct data types.
+
+If a method requires an `int`, the Java compiler responds with an error if you
+try to send a `float` value to th3e method.
+
+
+In these situations, you can use a process called *casting* to convert a value from one to another.
+
+Three types of casts and conversions:
+
+* Casting between primitive types
+* Casting from an object of a class to an object of another class
+* Casting primitive types to objects, and then extracting primitive values from those objects
+
