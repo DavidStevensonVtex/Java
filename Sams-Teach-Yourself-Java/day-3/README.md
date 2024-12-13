@@ -84,3 +84,12 @@ FamilyMember dad = new FamilyMember();
 System.out.println("Family's surname is: " + dad.surname);
 System.out.println("Family's surname is: " + FamilyMember.surname);
 ```
+
+#### Calling Methods
+
+Calling a method in an object also makes use of dot notation.
+
+`customer.addtoCart(itemNumber, price, quantity);`
+
+`customer.cancelOrder()`
+
