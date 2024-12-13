@@ -146,3 +146,7 @@ s2 = String.valueOf(550);
 ```
 
 s2 will have the value of "550".
+
+#### References to Objects
+
+A *reference* is an address that indicates where the object's variables and methods are stored.
