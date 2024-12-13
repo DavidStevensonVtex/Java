@@ -259,7 +259,7 @@ objects that represent the same text. If you were to employ the == operator to c
 these objects, however, they would be considered unequal. Although their contents match,
 they are not the same object.
 
-### Determining the Class of an Object
+#### Determining the Class of an Object
 
 `String name = key.getClass().getName()`
 
@@ -276,3 +276,5 @@ boolean check1 "Texas" instance of String;  // true
 Point pt = new Point(10,10);
 boolean check2 = pt instanceof String;  // false
 ```
+
+### Summary
