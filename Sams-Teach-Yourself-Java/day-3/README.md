@@ -57,3 +57,7 @@ instance or class variable name has two parts:
 
 `float total = store.customer.orderTotal;`
 
+#### Setting Values
+
+`customer.layaway = true;`
+
