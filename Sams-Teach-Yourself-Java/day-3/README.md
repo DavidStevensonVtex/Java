@@ -24,3 +24,13 @@ Point pt = new Point(0,0);
 The number and type of arguments to include inside the parentheses are defined by
 the class itself using a special method called a *constructor*.
 
+#### How Objects Are Constructed
+
+A *constructor# is a special way to create a new instance of a class.
+
+A class can have several different constructors, each with a different number or type of arguments.
+Whe nyou use new, you can specify different arguments in the argument list, and the corret constructor 
+for those arguments are called.
+
+No two constructors in a class can have the same numberand type of arguments.
+
