@@ -183,3 +183,23 @@ casts take the following form:
 
 `(typename) value`
 
+#### Casting Objects
+
+Objects of classes also can be cast into objects of other classes when the source and destination 
+classes are related by inheritance and one class is a subclass of the other.
+
+Because a  subclass contains all the ame information as its superclass, you can use an object of a
+subclass anywhere a superclass is expected.
+
+All Java classes are subclasses of Object.
+
+Because subclasses contain more behavior (and data) than their superclasses, a loss of precision occurs in the casting.
+
+To use superclass objects where subclass objects are expected, you must cast them explicitly.
+
+```
+Employee emp = new Employee();
+VicePresident veep = new VicePresident();
+emp = veep;                     // No cast needed for upward use
+veep = (VicePresident) emp;     // must cast explicitly
+```
