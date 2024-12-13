@@ -203,3 +203,36 @@ VicePresident veep = new VicePresident();
 emp = veep;                     // No cast needed for upward use
 veep = (VicePresident) emp;     // must cast explicitly
 ```
+
+#### Converting Primitive Types to Objects and Vice Versa
+
+One thing you can't do under any circumstances is cast from an object to a primitive data type, or vice versa.
+
+```
+Integer dataCount = new Integer(7801);
+int newCount = dataCount.intValue();    // returns 7801
+
+String pensylvannia = "65000";
+int penn = Integer.parseInt(pennsylvania);
+```
+
+the following classes can be used to work with objects instead of primitive data types:
+boolean, Byte, Character, Double, Float, Integer, Long, Short, and Void.
+
+Working with primtive types and objects that represent the same values is made easier through
+autoboxing and unboxing, an automatic conversion process.
+
+*Autoboxing* automatically converts a primitve type to an object, and *unboxing* converts
+in the other direction.
+
+```
+Float f1 = new Float(12.5);
+Float f2 = new Float(27.2F);
+System.out.println("Lower number: " + Math.min(f1, f2));
+```
+
+The Math.min() method takes two float values as arguments, but the preceding example
+sends the method two Float objects as arguments instead.
+
+Flaot objects are automatically unboxed into float values before being sent to the min()
+method.
