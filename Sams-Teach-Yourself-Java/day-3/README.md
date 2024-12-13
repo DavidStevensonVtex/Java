@@ -61,3 +61,26 @@ instance or class variable name has two parts:
 
 `customer.layaway = true;`
 
+#### Class Variables
+
+Class variables are variables defined and stored in the class itself.
+Their values apply to the class and all its instances.
+
+Each isntance can change the values of those instance variables without 
+affecting any other instances.
+
+```
+class FamilyMember {
+    static String surname = "Mendoza" ;
+    String name;
+    int age;
+}
+```
+
+If a class has a `static` variable, every object of that class has the same value for that variable.
+
+```
+FamilyMember dad = new FamilyMember();
+System.out.println("Family's surname is: " + dad.surname);
+System.out.println("Family's surname is: " + FamilyMember.surname);
+```
