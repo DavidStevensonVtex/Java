@@ -126,3 +126,23 @@ If the cancelOrder() method returns an object, you can call methods of that obje
 
 `customer.cancelOrder().fileComplaint()`
 
+#### Class Methods
+
+Class methods, like class variables apply to the class as a whole and not its instances.
+
+For example, the String class contains a class method called valueOf(), which can take many different types of arguments (integer, Booleans, objets, and so on).
+
+```
+int firstPrice = 225;
+int secondPrice = 217;
+int higherPrice = Math.max(firstPrice, secondPrice);
+```
+
+```
+String s, s2;
+s = "item";
+s2 = s.valueOf(550);
+s2 = String.valueOf(550);
+```
+
+s2 will have the value of "550".
