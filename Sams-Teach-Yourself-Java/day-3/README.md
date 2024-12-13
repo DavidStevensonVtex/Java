@@ -34,3 +34,12 @@ for those arguments are called.
 
 No two constructors in a class can have the same numberand type of arguments.
 
+#### A Note on Memory Management
+
+Memory management in Java is dynamic and automatic. When you create a new object, Java
+automatically allocates the proper amount of memory for the object.
+
+You don't need to deallocate the memory an object uses when you're finished using the object.
+
+The process of reclaiming unused memory from objects no longer used is called *garbage collection*.
+
