@@ -43,3 +43,17 @@ You don't need to deallocate the memory an object uses when you're finished usin
 
 The process of reclaiming unused memory from objects no longer used is called *garbage collection*.
 
+### Using Class and Instance Variables
+
+#### Getting Values
+
+To get to the value of an instance variable, you use *dot notation*, a form of addressing in which an
+instance or class variable name has two parts:
+
+* A reference to an object or class on the left side of the dot operator (.).
+* A variable on the right side.
+
+`float total = customer.orderTotal;`
+
+`float total = store.customer.orderTotal;`
+
