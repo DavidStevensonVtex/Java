@@ -117,3 +117,36 @@ void testBlock() {
     } // end of block
 }
 ```
+
+#### If Conditionals
+
+```
+if (arguments.length < 3) {
+    System.out.println("Not enough arguments");
+}
+```
+
+```
+String server;
+int duration;
+if (arguments.length < 1) {
+    server = "localhost"
+} else {
+    server = arguments[0];
+}
+```
+
+```
+int temperature = 530;
+if (temperature > 660) {
+    status = "returning home";
+    speed = 5;
+}
+```
+
+```
+boolean outOfGas = true;
+if (outOfGas) {
+    status = "inactive";
+}
+```
