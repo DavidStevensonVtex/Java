@@ -316,3 +316,18 @@ while (count++ < array1.length) {
     array2[count] = (float) array1[count++] ;
 }
 ```
+
+#### Labeled Loops
+
+```
+out:
+    for (int i = 0; i < 10; i++ ){
+        while (x < 50) {
+            if ( i * x++ > 400) {
+                break out;
+            }
+            // inner loop here
+        }
+        // outer loop here
+    }
+```
