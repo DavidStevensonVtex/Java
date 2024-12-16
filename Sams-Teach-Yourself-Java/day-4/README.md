@@ -227,3 +227,40 @@ An alternative to the if and else keywords:
 `test ? trueresult : falseresult;`
 
 `int ourBestScore = myScore > yourScore ? myScore : yourScore;`
+
+### For Loops
+
+The `for` loop in Java has the following structure:
+
+```
+for (initialization; test; increment) {
+    statement(s);
+}
+```
+
+initialization might be something like i = 0;
+test might be something like i < 10;
+increment might be something like i++
+
+```
+String[] salutation = new String[10];
+int i; // the loop index variable
+for (i = 0; i < salutation.length ; i++) {
+    salutation[i] = "Mr.";
+}
+```
+
+You can also can have an empty statement as the body of your for loop if everything you
+want to do is in the first line of that loop.
+```
+int i;
+for (i = 4001; notPrime(i) ; i + 2);
+```
+
+A common mistake in for loops is to accidentally put a semicolon at the end of the line that includes the for statement:
+
+```
+int x = 1;
+for (i = 0 ; i < 10; i++);
+x = x * i;  // This line is not inside the loop!
+```
