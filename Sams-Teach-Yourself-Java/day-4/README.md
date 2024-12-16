@@ -219,3 +219,11 @@ switch (x) {
         System.out.println("x is an odd number");
 }
 ```
+
+### The Ternary Operator
+
+An alternative to the if and else keywords:
+
+`test ? trueresult : falseresult;`
+
+`int ourBestScore = myScore > yourScore ? myScore : yourScore;`
