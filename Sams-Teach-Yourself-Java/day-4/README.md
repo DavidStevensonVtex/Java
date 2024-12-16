@@ -289,3 +289,30 @@ do {
     System.out.print(i + " ");
 } while ( i < 3_000_000_000L);
 ```
+
+### Breaking Out of Loops
+
+The break keyword:
+
+```
+int count = 0;
+while (count < array1.length) {
+    if (array1[count] == 1) {
+        break;
+    }
+    array2[count] = (float) array1[count++] ;
+}
+```
+
+The continue keyword:
+
+```
+int count = 0;
+int count2 = 0;
+while (count++ < array1.length) {
+    if (array1[count] == 1) {
+        continue;
+    }
+    array2[count] = (float) array1[count++] ;
+}
+```
