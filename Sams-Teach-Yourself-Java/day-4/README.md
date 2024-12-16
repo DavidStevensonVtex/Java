@@ -274,3 +274,18 @@ while (i < 13) {
     x = x * i++; // The body of the loop
 }
 ```
+
+If you need to execute the loop at least once, you can do one of two things:
+
+* Duplicate the body of the loop outside the while loop
+* Use a do loop (described next)
+
+#### Do-While Loops
+
+```
+long i = 1;
+do {
+    i *= 2;
+    System.out.print(i + " ");
+} while ( i < 3_000_000_000L);
+```
