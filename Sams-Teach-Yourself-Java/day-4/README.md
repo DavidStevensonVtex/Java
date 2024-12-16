@@ -81,3 +81,23 @@ manager[2] = manager[0];
 
 It's important to remember than array of objects in Java is an array of references to those objects.
 
+#### Multidimensional Arrays
+
+Arrays can be multidimensional, containing more than one subscript to store information in multiple dimensions.
+
+A common use of a multidimensional array to to represent the data in an (x, y) grid of array elements.
+
+Java supports this by enabling an array to hold arrays of each of its elements.
+
+```
+int[][] dayValue = new int[52][7];
+dayValue[9][0] = 14200;
+```
+
+```
+int[][][] century = new int[100][52][7];
+System.out.println("Elements in the first dimension: " + century.length);
+System.out.println("Elements in the second dimension: " + century[0].length);
+System.out.println("Elements in the third dimension: " + century[1].length);
+```
+
