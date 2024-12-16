@@ -70,3 +70,14 @@ The compiler reports an error with these lines of code. The error occurs because
 Executing this Java program would stop with an `ArrayIndexOutOfBoundsException` error.
 
 `System.out.println("Elements: " + rating.length);
+
+#### Changing Array Elements
+
+```
+temperature[4] = 85;
+day[0] = "Sunday";
+manager[2] = manager[0];
+```
+
+It's important to remember than array of objects in Java is an array of references to those objects.
+
