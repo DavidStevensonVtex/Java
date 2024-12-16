@@ -10,3 +10,20 @@ To create an array in Java, you must do the following:
 1. Create a new array object and assign it to the array variable.
 1. Store information in that array.
 
+#### Declaring Array Variables
+
+Examples:
+
+```
+String[] requests;
+Point[] targets ;
+float[] donations;
+```
+
+You can also declare an array by putting the brackes after the variable name instead of the information type:
+
+```
+String requests[] ;
+Point targets[] ;
+float donations[] ;
+```
