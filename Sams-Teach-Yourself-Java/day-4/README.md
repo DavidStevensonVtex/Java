@@ -264,3 +264,13 @@ int x = 1;
 for (i = 0 ; i < 10; i++);
 x = x * i;  // This line is not inside the loop!
 ```
+
+### While and Do Loops
+
+#### While Loops
+
+```
+while (i < 13) {
+    x = x * i++; // The body of the loop
+}
+```
