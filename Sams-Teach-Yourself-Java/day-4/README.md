@@ -55,3 +55,18 @@ Each of the elements inside the braces must be the ame type as the variable that
 All arrays have an instance variable named `length` that holds a count of the number of elements in the array.
 
 The first element of an array has a subscript of 0 rather than 1, so an array five elements has array slots accessed using subscripts 0 through 4.
+
+#### Accessing Array Elements
+
+`testScore[40] = 920;`
+
+```
+float[] rating = new float[20];
+rating[20] = 3.22F;
+```
+
+The compiler reports an error with these lines of code. The error occurs because the rating array does not have a slot numbered 20. It has slots 0 to 19.
+
+Executing this Java program would stop with an `ArrayIndexOutOfBoundsException` error.
+
+`System.out.println("Elements: " + rating.length);
