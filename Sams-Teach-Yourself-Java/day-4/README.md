@@ -150,3 +150,72 @@ if (outOfGas) {
     status = "inactive";
 }
 ```
+
+#### Switch Conditionals
+
+```
+char grade = 'D' ;
+switch (grade) {
+    case 'A':
+        System.out.println("Great job!");
+        break;
+    case 'B':
+        System.out.println("Good job!");
+        break;
+    case 'C':
+        System.out.println("You can do better!");
+        break;
+    default:
+        System.out.println("Consider cheating!");
+        break;
+}
+```
+
+The test variable can be the primitive byte, char, short, or int, or as of Java 7, class String.
+
+```
+String command = "close";
+switch (command) {
+    case "open":
+        openFile();
+        break;
+    case "close":
+        closefile();
+        break;
+    default:
+        System.out.println("Invalid command");
+}
+```
+
+```
+switch (operation) {
+    case '+':
+        add(object1, object2);
+        break;
+    case '-':
+        subtract(object1, object2);
+        break;
+    case '*':
+        multiply(object1, object2);
+        break;
+    case '/':
+        divide(object1, object2);
+        break;
+}
+```
+
+Fall-through switch statements:
+
+```
+int x = 5;
+switch (x) {
+    case 2:
+    case 4:
+    case 6:
+    case 8:
+        System.out.println("x is an even number");
+        break;
+    default:
+        System.out.println("x is an odd number");
+}
+```
