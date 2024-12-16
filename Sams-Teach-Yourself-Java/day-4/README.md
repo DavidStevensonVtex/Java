@@ -101,3 +101,19 @@ System.out.println("Elements in the second dimension: " + century[0].length);
 System.out.println("Elements in the third dimension: " + century[1].length);
 ```
 
+#### Block Statements
+
+Statements in Java are grouped into blocks. The beginning and ending boundaries of a block are noted with brace characters.
+
+An important thing to note about using a block is that it creates a scope for the local variables created inside the block.
+
+```
+void testBlock() {
+    int x = 10;
+    {
+        // start of block
+        int y = 400;
+        y = y + x;
+    } // end of block
+}
+```
