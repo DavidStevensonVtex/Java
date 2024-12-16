@@ -2,7 +2,7 @@
 
 class HalfDollars {
     public static void main (String[] args) {
-        int[] denver = { 1_900_000, 1_700_000, 1_700_00 };
+        int[] denver = { 1_900_000, 1_700_000, 1_700_000 };
         int[] philadelphia = new int[denver.length];
         int[] total = new int[denver.length];
         int average;
@@ -31,5 +31,5 @@ class HalfDollars {
 // Output
 // 2009 production: 3,800,000
 // 2010 production: 3,500,000
-// 2011 production: 1,920,000
-// Average production: 3,073,333
+// 2011 production: 3,450,000
+// Average production: 3,583,333
