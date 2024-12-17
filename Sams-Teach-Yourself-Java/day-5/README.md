@@ -67,3 +67,15 @@ returnType methodName(type1 arg1, type2 arg2, type3 arg3, ...) {
     // body of the method
 }
 ```
+
+#### The `this` Keyword
+
+`this` is a reference to the current instance of a class. Use it only inside the body of an instance method definition.
+
+Use the `this` keyword where you normally would refere to an object's name.
+
+```
+x = this.x;
+z.resetData(this);
+return this;
+```
