@@ -160,3 +160,24 @@ class VolcanoRobot {
     }
 }
 ```
+
+#### Calling Another Constructor
+
+Use the following code to calla constructor defined in the current class:
+
+`this(arg1, arg2, arg3)`
+
+```
+class Circle {
+    int x, y, radius;
+
+    Circle(int xPoint, int yPoint, int radiusLength) {
+        this.x = xPoint;
+        this.y = yPoint ;
+        this.radius = radiusLength;
+    }
+
+    Circle(int xPoint, int yPoint) {
+        this(xPoint, yPoint, 1);
+    }
+}
