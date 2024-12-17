@@ -121,3 +121,16 @@ public static void main(String[] arguments) {
 *arguments* is the name of the array of strings that contains the list of command line arguments.
 You can call this array anything you want.
 
+### Creating Methods with the Same Name
+
+When you work with the Java Class Library, you often encounter classes that have numerous methods with the same name.
+
+Two things differentiate thise same named methods:
+* The number of arguments theytake.
+* The primitive type or object type of each argument
+
+Using several methods with the same name and different signatures is called *overloading*.
+
+Method overloading can eliminate the need for entirely different methods that do essentially the same thing. Overloading also makes it possible for methods to behave differently based on the arguments they receive.
+
+
