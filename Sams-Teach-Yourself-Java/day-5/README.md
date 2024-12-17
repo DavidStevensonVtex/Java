@@ -197,3 +197,19 @@ to override a method, define a method in a subclass with the ame signature as a 
 
 #### Creating Methods that Override Existing Methods
 
+#### Calling the Original Method
+
+Usually, there are two reasons why you want to override a method that a superclass already has implemented.
+
+* To replace the definition of that original method in the subclass
+* To augment the original method with additional behavior.
+
+Use the `super` keyword to call the original method from inside a method definition.
+
+```
+void doMethod(String a, String b) {
+    // do stuff here
+    super.doMethod(a, b);
+    // do more stuff here
+}
+```
