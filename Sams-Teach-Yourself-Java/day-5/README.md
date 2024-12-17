@@ -100,6 +100,7 @@ The signature for the main() method takes the following format:
 public static void main(String[] arguments) {
     // body of method
 }
+```
 
 #### Helper Classes
 
@@ -108,4 +109,15 @@ public static void main(String[] arguments) {
 `java EchoArgs April 450 -10`
 
 To group arguments that include spaces, surround the arguments with quotation marks.
+
+#### Handling Arguments in Your Java Application
+
+```
+public static void main(String[] arguments) {
+    // body of method
+}
+```
+
+*arguments* is the name of the array of strings that contains the list of command line arguments.
+You can call this array anything you want.
 
