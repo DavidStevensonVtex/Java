@@ -13,6 +13,11 @@ public class Printer {
 class SubPrinter extends Printer {
     int z = 3;
 
+    void printMe() {
+        System.out.println("x is " + x + ", y is " + y + ", z is " + z);
+        System.out.println("I am an instance of the class " + this.getClass().getName());
+    }
+
     public static void main(String[] arguments) {
         SubPrinter obj = new SubPrinter();
         obj.printMe();
@@ -20,5 +25,5 @@ class SubPrinter extends Printer {
 }
 
 // Output
-// x is 0, y is 1
+// x is 0, y is 1, z is 3
 // I am an instance of the class SubPrinter
