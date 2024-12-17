@@ -133,4 +133,8 @@ Using several methods with the same name and different signatures is called *ove
 
 Method overloading can eliminate the need for entirely different methods that do essentially the same thing. Overloading also makes it possible for methods to behave differently based on the arguments they receive.
 
+### Constructors
 
+A constructor is a method called on an object when it is created -- in other words, when it is constructed.
+
+When an object is created of a class that has no constructors, a constructor with no arguments is implicitly provided by Java.
