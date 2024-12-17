@@ -17,3 +17,23 @@ By default, classes inherit from the Objet class. It's the superclass of all cla
 class SportsTicker extends Ticker {
     // body of the class
 }
+
+### Creating Instance and Class Variables
+
+#### Defiing Instance Variables
+
+Instance variables are declared and definedi n almost the same manner as local variables.
+The main difference is their location in the class definition.
+
+Variables are considered instance variables if they are declared outside of a method definition and are not modified by the `static` keyword.
+
+by programming custom, most instance variables are defined right after the first line of the class definition, but thye could just as easily be defined at the end.
+
+```
+class VolcanoRobot extends Sciencerobot {
+    String status;
+    int speed;
+    float temperature;
+    int power;
+}
+```
