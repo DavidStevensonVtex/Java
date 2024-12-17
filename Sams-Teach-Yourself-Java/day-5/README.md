@@ -37,3 +37,16 @@ class VolcanoRobot extends Sciencerobot {
     int power;
 }
 ```
+
+#### Class Variables
+
+Class variables apply to a class as a whole, rather than a particular object of that class.
+
+Class variables are good for sharing information between different objects of the same class or for keeping track of common information among a set of objects.
+
+The `static` keyword is used in the class declaration to declre a class variable.
+
+```
+static int SUM;
+static final in MAXOBJECTS = 10;
+```
