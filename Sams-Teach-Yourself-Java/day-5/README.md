@@ -79,3 +79,10 @@ x = this.x;
 z.resetData(this);
 return this;
 ```
+
+#### Variable Scope and Method Definition
+
+*Scope* is the part of a program in which a variable or another type of information exists, making it possible to use variable in statements and expressions.
+
+When you declare a variable in Java, that variable always has limited scope.
+
