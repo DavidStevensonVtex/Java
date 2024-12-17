@@ -87,3 +87,16 @@ return this;
 When you declare a variable in Java, that variable always has limited scope.
 
 #### Passing Arguments to Methods
+
+#### Class Methods
+
+### Creating Java Applications
+
+Applications are Jav classes that can be run on their own.
+
+The signature for the main() method takes the following format:
+
+```
+public static void main(String[] arguments) {
+    // body of method
+}
