@@ -50,3 +50,20 @@ The `static` keyword is used in the class declaration to declre a class variable
 static int SUM;
 static final in MAXOBJECTS = 10;
 ```
+
+### Creating Methods
+
+#### Defining Methods
+
+A method definition has four basic parts:
+
+* The method's name
+* A list of parameters and their type
+* The type of object or primitive type that the method returns
+* the body of the method
+
+```
+returnType methodName(type1 arg1, type2 arg2, type3 arg3, ...) {
+    // body of the method
+}
+```
