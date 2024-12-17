@@ -213,3 +213,18 @@ void doMethod(String a, String b) {
     // do more stuff here
 }
 ```
+
+#### Overriding Constructors 
+
+Technically, constructors cannot be overridden.
+New constructor methods are created instead of being inherited.
+
+To call a regular method in a superclass, you use `super.methodname(arguments)`.
+Because constructor methods don't have a method name to call, the following form is used:
+
+`suepr(arg1, arg2, arg3)`
+
+Java has a rule for the use of super(): It must be the first statement in your constructor definition.
+
+You don't have to call the constructor in your superclass that has the same signature as the constructor in your class; you have to call the constructor only for the values you need initialized.
+
