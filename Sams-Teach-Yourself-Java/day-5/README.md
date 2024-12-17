@@ -138,3 +138,25 @@ Method overloading can eliminate the need for entirely different methods that do
 A constructor is a method called on an object when it is created -- in other words, when it is constructed.
 
 When an object is created of a class that has no constructors, a constructor with no arguments is implicitly provided by Java.
+
+#### Basic Constructors
+
+Constructors look like regular methods, with three basic differences:
+
+* They always have the same name as the class
+* They don't have a return type
+* The cannot return a value in the method by using the `return` statement
+
+```
+class VolcanoRobot {
+    String status;
+    int speed;
+    int power;
+
+    VolcanoRobot(String in1, int in2, int in3) {
+        status = in1;
+        speed = in2;
+        power = in3;
+    }
+}
+```
