@@ -181,7 +181,16 @@ class Circle {
         this(xPoint, yPoint, 1);
     }
 }
+```
 
 #### Overloading Constructors
 
 Like methods, Constructors can also take varying numbers and types of parameters.
+
+#### Overriding Methods
+
+Inheritance allows you to define and use methods repeatedly in subclasses without having to duplicate the code.
+
+You can override a method
+
+to override a method, define a method in a subclass with the ame signature as a method in a superclass. Then when the method is called, the subclass method is found and executed instead of the one in the superclass.
