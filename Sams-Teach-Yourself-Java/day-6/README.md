@@ -245,3 +245,8 @@ Classes declared as public can be accessed by classes outside the package.
 Note that when you use an `import` statement with an asterisk, you import only the public classes inside that package. Other c lasses remain hidden and can be used only by other c lasses in that package.
 
 Creating a good package consists of defining a small, clean set of public classes and methods for other classes to use and then implementing them by using any number of hidden support classes.
+
+### Interfaces
+
+Interfaces, like abstract classes and methods, provide templates of behavior that other classes are expected to implement.
+
