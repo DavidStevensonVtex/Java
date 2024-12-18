@@ -35,3 +35,13 @@ Private variables are useful in two circumstances:
 * When another class could wreak havoc by changing the variable in an inappropriate way.
 
 Using the `private` modifier is the main way in which an object encapsulates itself.
+
+##### Public Access
+
+You may want a method or variable in a class to be completely available to any other class that wants to use it.
+
+Class variables often are declared to be public.
+
+The main() method of an application has to be public.
+
+Because of class inheritance, all public methods and variables of a class are inherited.
