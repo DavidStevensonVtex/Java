@@ -150,3 +150,15 @@ Abstract classes can contain anything a normal class can, including c onstructor
 Abstract classes can also contain abstract methods, which are method signatures with no implementation. These methods are implemented in subclasses of the abstract class. Abstract methods are declared with the `abstract` modifier.
 
 If your abstract class has nothing but abstract methods,you're better off using an interface.
+
+### Packages
+
+Packages are a way of organizing groups of classes.
+
+Packages are useful for several broad reasons:
+
+* They enable you to organize your classes into units.
+* They reduce problems with conflicts about names.
+* They enable you to protect classes, variables and methods in larger ways that on a class-by-class basis.
+* Packages can be used to uniquely identify your work.
+
