@@ -206,3 +206,10 @@ public class ShortCosntants {
 
 `java.util.Date = new java.util.Date();`
 
+### Creating Your Own Packages
+
+#### Picking a Package Name
+
+If you intend to distribute your package as an open source or commercial product, use a package name that uniquely identifies its authorship.
+
+Oracle recommends that Java developers use an Internet domain name that you control as the basis for a unique package name.
