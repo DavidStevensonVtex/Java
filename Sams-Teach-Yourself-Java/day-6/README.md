@@ -132,3 +132,21 @@ public final class ChatServer {
 ```
 
 All methods in a final class are automatically final themselves.
+
+### Abstract Classes and Methods
+
+In a class hierarchy, the higher the class, the more abstract its definition.
+
+When you factor out common behavior and attributes during the process of defining a hierarchy of classes, you might at times find yourself with a class that never needs to be instantiated directly. Instead, such a class serves as a place to hold common behavior and attributes shared by their subclasses.
+
+```
+public abstract class Palette {
+    // ...
+}
+```
+
+Abstract classes can contain anything a normal class can, including c onstructors, because their subclasses might need to inherit them. 
+
+Abstract classes can also contain abstract methods, which are method signatures with no implementation. These methods are implemented in subclasses of the abstract class. Abstract methods are declared with the `abstract` modifier.
+
+If your abstract class has nothing but abstract methods,you're better off using an interface.
