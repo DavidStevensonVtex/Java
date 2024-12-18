@@ -45,3 +45,10 @@ Class variables often are declared to be public.
 The main() method of an application has to be public.
 
 Because of class inheritance, all public methods and variables of a class are inherited.
+
+##### Protected Access
+
+The next level of access control is to limit a method and a variable to use by following two groups:
+
+* Subclasses of a class
+* Other classes in the same package
