@@ -52,3 +52,17 @@ The next level of access control is to limit a method and a variable to use by f
 
 * Subclasses of a class
 * Other classes in the same package
+* 
+##### Comparing Levels of Access Control
+
+##### Access Control and Inheritance
+
+When you create a subclass and override a method, you must consider the access control in place on the original method.
+
+As a general rule, you cannot override a method in Java and make the new method more restrictively controlled than the original. You can, however, make it more public.
+
+* Methods declared public in a superclass also must be public in all subclasses.
+* Methods declared protected in a superclass must be either protected or public in subclasses; they cannot be private.
+* Methods declared without access control (no modifier was used) can be declared more private in subclasses.
+* 
+Methods declared private are not inherited, so the rules don't apply.
