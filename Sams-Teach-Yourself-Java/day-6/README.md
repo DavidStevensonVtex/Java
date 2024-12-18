@@ -228,4 +228,20 @@ Add a statement to the class file above any import declarations and the class de
 
 The package declaration must be the first line of code in your source file, disregarding comments or blank lines.
 
+#### Packages and Class Access Control
 
+Classes have the default access control if no modifier is specified, which means that the class is available to all other classes in the same package but is not visible or available outside of that package.
+
+To allow a class to be visible and importable outside your package, you can give it public protection by adding the `public` modifier to its definition:
+
+```
+public class Visible {
+    // ...
+}
+```
+
+Classes declared as public can be accessed by classes outside the package.
+
+Note that when you use an `import` statement with an asterisk, you import only the public classes inside that package. Other c lasses remain hidden and can be used only by other c lasses in that package.
+
+Creating a good package consists of defining a small, clean set of public classes and methods for other classes to use and then implementing them by using any number of hidden support classes.
