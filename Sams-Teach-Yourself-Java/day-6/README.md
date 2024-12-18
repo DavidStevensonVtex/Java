@@ -24,3 +24,14 @@
 A variable or method declared without an access control modifier is available to any other class in the same package.
 
 Any variable declared without a modifier can be read or changed by any other class in the same package.
+
+##### Private Access
+
+To completely hide a method or variable and keep it from being used by other classes, use the `private` modifer.
+
+Private variables are useful in two circumstances:
+
+* When other classes have no reason to use that variable
+* When another class could wreak havoc by changing the variable in an inappropriate way.
+
+Using the `private` modifier is the main way in which an object encapsulates itself.
