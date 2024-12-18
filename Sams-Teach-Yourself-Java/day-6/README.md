@@ -295,3 +295,36 @@ public class AnimatedSign extends Sign implements runnable, Observer {
 #### Other Uses of Interfaces
 
 You also can cast objects to an interface, just as you can cast objects to other classes.
+
+### Creating and Extending Interfaces
+
+#### New Interfaces
+
+```
+public interface Expandable {
+    public abstract void expand();  // explicitly public and abstract
+    void contract();                // effectively pubilc and abstract
+}
+```
+
+Bot methods are public and abstract. Methods inside interaces do not have bodies.
+An interrace consists of only a method signature.
+
+As with methods, you can explicitly define a variable to be public, static and final, or it is implicitly defined as such if you don't use those modifiers.
+
+```
+public interface Expandable {
+    public static final int INCREMENT = 10;
+    long CAPACITY = 15000;          // becomes public static and final
+    public abstract void expand();  // explicitly public and abstract
+    void contract();                // effectively pubilc and abstract
+}
+```
+
+Interfaces must have either public or package protection, just like classes.
+
+Note, however that interfaces without the public modifier do not automatically convert their methods to ppublic and abstract nor their constants to public.
+
+A nonpublic itnerface has also nopublic methods and constants an can be used only by classes and other interfaces in the same package.
+
+Interfaces, like classes can belong to a package.
