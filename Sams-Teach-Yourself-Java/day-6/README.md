@@ -99,3 +99,12 @@ The `final` modifier is used with classes, methods and variables to indicate tha
 * A `final` class cannot be subclassed.
 * A `final` method cannot be override by any subclasses.
 * A `final` variable cannot change in value.
+
+#### Final Variables
+
+The `final` modifier is often used with `static` to make the constant a class variable.
+
+```
+public static final int TOUCHDOWN = 6 ;
+static final String TITLE = "Captain" ;
+```
