@@ -213,3 +213,10 @@ public class ShortCosntants {
 If you intend to distribute your package as an open source or commercial product, use a package name that uniquely identifies its authorship.
 
 Oracle recommends that Java developers use an Internet domain name that you control as the basis for a unique package name.
+
+By another convention, package names use no capital letters, which distinguishes them from class names.
+
+#### Creating the Folder Structure
+
+Createa folder structure that matches the package name, which requires a separate folder for each part of the name.
+
