@@ -197,3 +197,12 @@ public class ShortCosntants {
 }
 ```
 
+#### Class Name Conflicts
+
+`java.util` and `java.sql` both contain a class named `Date`.
+
+`import java.sql*`;
+`import java.util.*`
+
+`java.util.Date = new java.util.Date();`
+
