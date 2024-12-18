@@ -162,3 +162,38 @@ Packages are useful for several broad reasons:
 * They enable you to protect classes, variables and methods in larger ways that on a class-by-class basis.
 * Packages can be used to uniquely identify your work.
 
+#### The `import` Declaration
+
+`import java.util.Vector`
+
+`import java.awt.*`
+
+`import java.util.*`
+
+This merely imports the `java.util` package.
+
+```
+import java.uti.*;
+import java.util.jar.*;
+import java.util.prefs.*;
+```
+
+You cannot indicate partial class names (such as l* to import all the classes that begin with the letter L).
+
+The `import` declarations in your class definition go at the top of the file, before any class definitions but after the package declaration.
+
+An `import static` statement makes the constants in an identified class available in shorter form. The keywords `import static` are followed by the name of an interface or class and an asterisk.
+
+`import static java.lang.Math.*;`
+
+```
+import static java.lang.Math.* ;
+
+public class ShortCosntants {
+    pubic static void main(String[] arguments) {
+        System.out.println("PI: " + PI);
+        System.out.println("" + (PI *3));
+    }
+}
+```
+
