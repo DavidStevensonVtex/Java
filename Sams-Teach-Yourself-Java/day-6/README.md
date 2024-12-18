@@ -70,3 +70,23 @@ Methods declared private are not inherited, so the rules don't apply.
 ##### Accessor Methods
 
 You can give other classes access to a private variable by using an accessor method inside the same class.
+
+### Static Variables and Methods
+
+The `static` modifier is used to create class methods and variables.
+
+```
+public class Circle {
+    public static final float PI = 3.14159265F ;
+
+    public float area (float r) {
+        return PI * r * r;
+    }
+}
+```
+
+The following statements use class variables and methods:
+```
+float circumference = 2 * Circle.PI * getRadius();
+float randomNumber = Math.random();
+```
