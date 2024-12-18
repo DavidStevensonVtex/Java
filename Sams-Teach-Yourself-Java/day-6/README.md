@@ -120,3 +120,15 @@ public final void getSignature() {
 ```
 
 Private methods are final without being declared that way because they can't be overridden in a subclass under any circumstance.
+
+#### Final Classes
+
+A `final` class *cannot* be subclassed by another class.
+
+```
+public final class ChatServer {
+    // body of method
+}
+```
+
+All methods in a final class are automatically final themselves.
