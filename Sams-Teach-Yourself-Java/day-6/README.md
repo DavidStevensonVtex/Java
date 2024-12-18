@@ -280,3 +280,14 @@ After your class implements an interface, subclasses of your class inherit those
 
 Ify our class inherits from a superclass that implements a given interface, you don't have to include the `implements` keyword in your own class definition.
 
+#### Implementing Multiple Interfaces
+
+```
+public class AnimatedSign extends Sign implements runnable, Observer {
+    // ...
+}
+```
+
+* If the methods in heach interface have identical signatures, you implement one method in your class, and that method satisfies both interfaces.
+* If the methods have different argument lists, it is a simple case of method overloading; you implement both method signatures.
+* If the methods have the same argument lists but different return types, you cannot create a method that satisfies both.
