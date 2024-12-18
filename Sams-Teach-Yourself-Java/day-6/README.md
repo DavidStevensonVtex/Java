@@ -250,3 +250,13 @@ Creating a good package consists of defining a small, clean set of public classe
 
 Interfaces, like abstract classes and methods, provide templates of behavior that other classes are expected to implement.
 
+#### The Problem of Single Inheritance
+
+Java supports only single inheritance for the reason of simplicity.
+
+A Java interface is a collection of abstract behavior that can be adopted by any class without being inherited from a superclass.
+
+An interface contains nothing but abstract method definitions and constants. It has no instance variables or method implementations.
+
+Example: `java.lang.Comparable`
+
