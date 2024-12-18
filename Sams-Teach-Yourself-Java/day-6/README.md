@@ -18,3 +18,9 @@
 * default
 
 `Encapsulation`: An object controls what the outside world can know about it and how the outside world can interact with it.
+
+##### Default Access
+
+A variable or method declared without an access control modifier is available to any other class in the same package.
+
+Any variable declared without a modifier can be read or changed by any other class in the same package.
