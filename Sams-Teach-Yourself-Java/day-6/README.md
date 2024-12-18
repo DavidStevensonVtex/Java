@@ -108,3 +108,15 @@ The `final` modifier is often used with `static` to make the constant a class va
 public static final int TOUCHDOWN = 6 ;
 static final String TITLE = "Captain" ;
 ```
+
+#### Final Methods
+
+Final methods can never be overridden by a subclass.
+
+```
+public final void getSignature() {
+    // body of method
+}
+```
+
+Private methods are final without being declared that way because they can't be overridden in a subclass under any circumstance.
