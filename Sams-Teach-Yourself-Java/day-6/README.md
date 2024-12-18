@@ -260,3 +260,8 @@ An interface contains nothing but abstract method definitions and constants. It 
 
 Example: `java.lang.Comparable`
 
+#### Interfaces and Classes
+
+Interfaces and classes are somewhat interchangeable.
+
+An interface cannot be instantiated. `new` can only create an instance of a non-abstract class.
