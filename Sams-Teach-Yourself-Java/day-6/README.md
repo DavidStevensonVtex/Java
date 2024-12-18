@@ -220,3 +220,12 @@ By another convention, package names use no capital letters, which distinguishes
 
 Createa folder structure that matches the package name, which requires a separate folder for each part of the name.
 
+#### Adding a Class to a Package
+
+Add a statement to the class file above any import declarations and the class declaration. The package declaration is followed by the full name of the package:
+
+`package org.cadenhead.rss`
+
+The package declaration must be the first line of code in your source file, disregarding comments or blank lines.
+
+
