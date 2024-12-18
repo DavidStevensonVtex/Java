@@ -265,3 +265,18 @@ Example: `java.lang.Comparable`
 Interfaces and classes are somewhat interchangeable.
 
 An interface cannot be instantiated. `new` can only create an instance of a non-abstract class.
+
+#### Implementing and Using Interfaces
+
+To use an interface, include the `implements` keyword as part of your class definition.
+
+`public class AnimatedSign extends Sign implements Runnable {
+    // ...
+}
+
+To implement an interface, you must implement all of the methods that interface defines.
+
+After your class implements an interface, subclasses of your class inherit those new methods and can override or overload them. 
+
+Ify our class inherits from a superclass that implements a given interface, you don't have to include the `implements` keyword in your own class definition.
+
