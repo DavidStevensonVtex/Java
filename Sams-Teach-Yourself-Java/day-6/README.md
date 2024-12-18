@@ -86,6 +86,7 @@ public class Circle {
 ```
 
 The following statements use class variables and methods:
+
 ```
 float circumference = 2 * Circle.PI * getRadius();
 float randomNumber = Math.random();
