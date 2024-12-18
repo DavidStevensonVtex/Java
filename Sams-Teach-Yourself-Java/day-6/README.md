@@ -91,3 +91,11 @@ The following statements use class variables and methods:
 float circumference = 2 * Circle.PI * getRadius();
 float randomNumber = Math.random();
 ```
+
+### Final Classes, Methods and Variables
+
+The `final` modifier is used with classes, methods and variables to indicate that they will never be changed.
+
+* A `final` class cannot be subclassed.
+* A `final` method cannot be override by any subclasses.
+* A `final` variable cannot change in value.
