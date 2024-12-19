@@ -361,3 +361,7 @@ Unlike classes, the Interface hierarchy has no equivalent of the Object class.
 
 Unlike the class hierarchy, the inheritance hierarchy can have multiple inheritance.
 
+### Creating an Online Storefront
+
+* Calculating the sale price of each item, depending on how much of it is presently in stock.
+* *Sorting items according to sale price.
