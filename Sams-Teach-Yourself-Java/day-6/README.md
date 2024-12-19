@@ -328,3 +328,23 @@ Note, however that interfaces without the public modifier do not automatically c
 A nonpublic itnerface has also nopublic methods and constants an can be used only by classes and other interfaces in the same package.
 
 Interfaces, like classes can belong to a package.
+
+#### Methods Inside Interfaces
+
+What class should the arguments for the interface methods be? Perhaps the same as the interface.
+
+```
+public interface Trackable {
+    public abstract Trackable beginTracking(Trackable self);
+}
+```
+
+```
+public class Monitor implements Trackable {
+    public Trackable beginTracking(Trackable self) {
+        Monitor mon = (Monitor) self ;
+        // ...
+        return mon ;
+    }
+}
+```
