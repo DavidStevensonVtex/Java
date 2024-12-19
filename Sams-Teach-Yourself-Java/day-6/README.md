@@ -348,3 +348,16 @@ public class Monitor implements Trackable {
     }
 }
 ```
+
+#### Extending Interfaces
+
+```
+interface PreciselyTrackable extends Trackable {
+    // ...
+}
+```
+
+Unlike classes, the Interface hierarchy has no equivalent of the Object class.
+
+Unlike the class hierarchy, the inheritance hierarchy can have multiple inheritance.
+
