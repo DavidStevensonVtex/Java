@@ -361,7 +361,37 @@ Unlike classes, the Interface hierarchy has no equivalent of the Object class.
 
 Unlike the class hierarchy, the inheritance hierarchy can have multiple inheritance.
 
-### Creating an Online Storefront
+#### Creating an Online Storefront
 
 * Calculating the sale price of each item, depending on how much of it is presently in stock.
 * *Sorting items according to sale price.
+
+### Inner Classes
+
+Classes that belong to a package are called top-level classes.
+
+You can define a class inside a class as if it were a method or variable. The class follows the same rules for how it is structured, except that it is defined within another class definition.
+
+```
+public class Zone {
+    int x, y, width, height;
+    
+    class Center { // inner class begins
+        int cx, cy;
+
+        Center(int x, int y) {
+            cx = y;
+            cy = x;
+        }
+    } // inner class ends
+    
+    public Zone(int x1, int y1, int x2, int y2) {
+        x = x1;
+        y = y1;
+        width = y2 - y1;
+        height = x2 - x1;
+        // create object of inner class
+        Center c = new Center((x1 + x2) / 2, (y1 + y2) / 2);
+    }
+}
+```
