@@ -395,3 +395,6 @@ public class Zone {
     }
 }
 ```
+
+* Inner classes are invisible to all other classes, which means that you don't have to worry about name conflicts between inner class and other classes.
+* Inner classes can have access to variables and methods within the scope of a top-level class that they would not have as a separate class.
