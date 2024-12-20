@@ -290,3 +290,6 @@ You create more work for everyone involved when you get carried away with except
 
 Declare only the exceptions that have a reasonably fair chance of happening and that make sense for the overall design of your classes.
 
+#### Bad Style Using Exceptions
+
+Compiler errors regarding exceptions are there to remind you to reflect on these issues.
