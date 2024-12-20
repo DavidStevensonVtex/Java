@@ -34,3 +34,85 @@ In Java, a method can indicate the kinds of errors it might potentially throw. F
 
 This rule is enforced by the compiler itself, in the same way that it checks to make sure that you're using methods with the correct number of arguments and that your variable types match what you're assigning to them.
 
+#### Protecting Code and Catching Exceptions
+
+```
+    public SquareTool(String input) {
+        try {
+            float in = Float.parseFloat(input) ;
+            // ...
+        }
+        catch ( NumberFormatException nfe) {
+            System.out.println(input + " is not a valid number.");
+        }
+    }
+```
+
+In this code, the `Float.parseFloat()` class method might throw an exception of type `NumberFormatException`.
+
+```
+    try {
+        float in = Float.parseFloat(input) ;
+        // ...
+    }
+    catch ( NumberFormatException nfe) {
+        System.out.println("Oops: " + nfe.getMessage());
+    }
+```
+
+```
+try {
+    // code that might generate exceptions
+} catch ( IOException ioe) {
+    System.out.println("Input/output error: " + ioe.getMessage());
+} catch (ClassNotFoundException cnfe) {
+    System.out.println("Class not found: " + cnfe.getMessage());
+} catch (InterruptedException ie) {
+    System.out.println("Program interrupted: " + ie.getMessage());
+}
+```
+
+I Java 7, you can also catch more than one class of exceptions in the same `catch` statement.
+The classes must be separated by a pipe character(|).
+
+```
+try {
+    // code that reads a file from disk
+} catch (EOFException | FileNotFoundException exc) {
+    System.out.print("File error: " + exc.getMessage());
+}
+```
+
+The exceptions declared as alternatives int the `catch` statement cannot be superclasses or subclasses of each other unless they are in the proper order. The following would not work:
+
+```
+try {
+    // code that reads a file from disk
+} catch (IOException | EOFException | FileNotFoundException exc) {
+    System.out.print("File error: " + exc.getMessage());
+}
+```
+
+`IOException` is a superclass of the other two exceptions.
+
+Here's a fixed version that would work:
+
+```
+try {
+    // code that reads a file from disk
+} catch (EOFException | FileNotFoundException exc) {
+    System.out.print("File error: " + exc.getMessage());
+} catch (IOException ioe) {
+    System.out.print("IO error: " + ioe.getMessage());
+}
+```
+
+Another way to make it work would be to put the superclass last in the `catch` statement:
+
+```
+try {
+    // code that reads a file from disk
+} catch (EOFException | FileNotFoundException | IOException exc) {
+    System.out.print("File error: " + exc.getMessage());
+}
+```
