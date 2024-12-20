@@ -229,4 +229,21 @@ You can create and throw your own exceptions.
 
 `throw new NotInServiceException("Exception: Database Not in Service");`
 
+#### Creating Your Own Exceptions
 
+All user-created exceptions should be part of the `Exception` hierarchy rather than the `Error` hiearchy.
+
+Look for an exception close to the one you are creating: a bad file format might inherit from `IOException`.
+
+Otherwise, you can inherit from `Exception`.
+
+Exception classes typically have two constructors: The first takes no arguments, and the second takes a single string as an argument.
+
+```
+public class SunSpotException extends Exception {
+    public SunSpotException() {}
+    public SunSpotException(String msg) {
+        super(msg);
+    }
+}
+```
