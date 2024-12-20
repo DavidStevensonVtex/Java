@@ -198,3 +198,24 @@ public float readFloat(String input) throws NumberFormatException {
     return Float.parseFloat(input);
 }
 ```
+
+#### throws and Inheritance
+
+If your method overrides a method in a superclass that includes a throws c lause, there are special rules for how your overriden method deals with `throws`. The overridden method does not require the same set of exceptions listed in the throws clause.
+
+```
+public class RadioPlayer {
+    public void starPlaying() throws SoundException {
+        // body of method
+    }
+}
+
+public class StereoPlayer extends RadioPlayer {
+    public void startPlaying() {
+        // body of method
+    }
+}
+```
+
+A subclass method cannot throw more checked exceptions than its superclass method.
+
