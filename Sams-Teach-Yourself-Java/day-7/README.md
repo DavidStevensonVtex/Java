@@ -219,3 +219,14 @@ public class StereoPlayer extends RadioPlayer {
 
 A subclass method cannot throw more checked exceptions than its superclass method.
 
+### Creating and Throwing Your Own Exceptions
+
+You can create and throw your own exceptions.
+
+#### Throwing Exceptions
+
+`throw new NotInServiceException();`
+
+`throw new NotInServiceException("Exception: Database Not in Service");`
+
+
