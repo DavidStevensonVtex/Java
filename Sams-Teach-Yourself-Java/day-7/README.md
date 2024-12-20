@@ -186,3 +186,15 @@ In particular, exceptions of either the `Error` or `RuntimeException` class or a
 * **Unchecked exceptions** are exceptions that are not checked at compile time. This means that you are not required to handle them explicitly.
 
 *Checked exceptions* are potential c andidates for a `throws` clause in your method
+
+#### Passing on Exceptions
+
+There are times when it doesn't make sense for your method to deal with an exception. It might be better for the method that calls your method to deal with that exception.
+
+One thing is always true: It's better to pass on exceptions to calling methods than to catch them and do nothnig in response.
+
+```
+public float readFloat(String input) throws NumberFormatException {
+    return Float.parseFloat(input);
+}
+```
