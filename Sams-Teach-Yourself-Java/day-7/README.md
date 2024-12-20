@@ -131,3 +131,16 @@ try {
     closeTextFile();
 }
 ```
+
+Java 7 offers a new way to ensure that resources are freed properly even when an operation inside a `try` block fails with an exception. The `try-with-resources` featuer enables statements that claim resources to be declared inside parentheses in a `try` statement.
+
+```
+try (Socket digit = new Socket(host, 79);
+    BufferedReader in = new BufferedReader(new InputStreamReader(digit.getInputStream()));
+) {
+    // code goes here
+}
+catch ( IOException e) {
+    System.out.println("IO Error: " + e.getMessage());
+}
+```
