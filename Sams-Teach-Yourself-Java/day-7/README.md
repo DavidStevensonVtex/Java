@@ -279,3 +279,14 @@ In cases where a method throws more than one exception, you can handle each of t
 If your method throws its own exceptions, you should declare that it throws those methdos using the `throws` statement.
 
 If you method overrides a superclass method that has a `throws` statement, you can throw the same types of checked exceptions or subclases of those exceptions; you cannot throw any different types of checked exceptions.
+
+#### When Not to Use Exceptions
+
+Use the array length to avoid `ArrayIndexOutOfBounds` exceptions.
+
+Test string inputs to be the proper number type (int), rather than relying on conversion errors.
+
+You create more work for everyone involved when you get carried away with exceptions.
+
+Declare only the exceptions that have a reasonably fair chance of happening and that make sense for the overall design of your classes.
+
