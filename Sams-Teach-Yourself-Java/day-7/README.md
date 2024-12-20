@@ -298,3 +298,47 @@ Compiler errors regarding exceptions are there to remind you to reflect on these
 
 *Threads* are parts ofthe program set up to run on their own while the rest of the program does something else. This is also called *multitasking* because the program can handle more than one task simultaneously.
 
+#### Writing a Threaded Program
+
+Threads are implemented in Java with the `Thread` class in the `java.lang` package.
+
+```
+try {
+    Thread.sleep(3000);
+}
+catch (InterruptedException ie) {
+    // do nothing
+}
+```
+
+A thread can be created in two ways: by subclassing the `Thread` class or implementing the `Runnable` interface in another class.
+
+Because the `Thread` class implements `Runnable`, both techniques result in objects that start and stop threads in the same manner.
+
+```
+public class StockTicker implements Runnable {
+    public void run() {
+        // ...
+    }
+}
+```
+
+```
+StockTicker tix = new StockTicker();
+Thread tickerThread = new Thread(tix);
+```
+
+A thrad is begin by calling its `start()` method:
+
+`tickerThread.start();`
+
+```
+Thread runner = null;
+if (runner == null) {
+    runner = new Thread(this);
+    runner.start();
+}
+```
+
+Calling the start() method causes the Thread's run() method to be executed.
+
