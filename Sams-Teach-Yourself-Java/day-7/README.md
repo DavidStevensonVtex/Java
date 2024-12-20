@@ -144,3 +144,33 @@ catch ( IOException e) {
     System.out.println("IO Error: " + e.getMessage());
 }
 ```
+
+### Declaring Methods That Might Throw Exceptions
+
+#### The throws clause
+
+```
+public void getFormula(int x, int y) throws NumberFormatException {
+    // body of method
+}
+```
+
+Separate multiple exceptions with a comma.
+
+```
+public void getFormula(int x, int y) throws NumberFormatException, EOFException {
+    // body of method
+}
+```
+
+Note that, as with `catch`, you can use a superclass of a group of exceptions to indicate that your method might ghrow any subclass of that exception. For example:
+
+```
+public void loadFormula() throws IOException {
+    // ...
+}
+```
+
+The `throws` clause means that the method *might* throw an exception.
+
+
