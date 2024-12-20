@@ -173,4 +173,16 @@ public void loadFormula() throws IOException {
 
 The `throws` clause means that the method *might* throw an exception.
 
+#### Which Exceptions Should You Throw?
 
+In many instances, this is apparent from the operation of the method itself. Perhaps you're already creating and throwing your own exceptions.
+
+You don't have to list all possible exceptions. Unchecked exceptions are handled by the runtime itself and are so common you don't have to deal with them.
+
+In particular, exceptions of either the `Error` or `RuntimeException` class or any of their subclasses do not have to be listed in your `throws` clause.
+
+
+* **Checked exceptions** are exceptions that are checked at compile time. This means that the compiler forces you to either handle these exceptions using a try-catch block or declare them in the method signature using the throws keyword.
+* **Unchecked exceptions** are exceptions that are not checked at compile time. This means that you are not required to handle them explicitly.
+
+*Checked exceptions* are potential c andidates for a `throws` clause in your method
