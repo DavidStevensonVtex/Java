@@ -22,3 +22,15 @@ Exceptions are arranged in a hierarchy just as other classes are, where the supe
 The primary exception classes are part of the `java.lang` package: `Throwable`, `Exception` and `RuntimeException`.
 
 The `java.io` package defines a general exception class called `IOException`.
+
+### Managing Exceptions
+
+#### Exception Consistency Checking
+
+```
+Exception java.lang.InterruptedException must be caught or it must be  declared in the throws clause of this method.
+```
+In Java, a method can indicate the kinds of errors it might potentially throw. For example, methods that read from files can throw `IOException` errors, so those methods are declared with a special modifier that indicates potential errors.
+
+This rule is enforced by the compiler itself, in the same way that it checks to make sure that you're using methods with the correct number of arguments and that your variable types match what you're assigning to them.
+
