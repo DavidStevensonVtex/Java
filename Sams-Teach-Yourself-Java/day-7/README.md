@@ -116,3 +116,18 @@ try {
     System.out.print("File error: " + exc.getMessage());
 }
 ```
+
+#### The finally clause
+
+Suppose there is some action in your code that you absolutely must do, no matter what happens, 
+regardless of whether an exception is thrown.
+
+```
+try {
+    readTextFile();
+} catch (IOException ioe) {
+    // deal with IO errors
+} finally {
+    closeTextFile();
+}
+```
