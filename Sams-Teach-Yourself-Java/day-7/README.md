@@ -344,3 +344,19 @@ Calling the start() method causes the Thread's run() method to be executed.
 
 #### A Threaded Application
 
+#### Stopping a Thread
+
+The stop() method in the Thread class is unstable and should not be used.
+
+A better way to stop a t hread is to place a loop in the thread's run() method that ends when a variable c hanges in value, such as in the following example:
+
+```
+public void run() {
+    while (okToRun == true) {
+        // ...
+    }
+}
+```
+
+The okToRun variable could be an instance variable of the thread's class. If it is changed to `false`, the loop inside the run() method ends.
+
