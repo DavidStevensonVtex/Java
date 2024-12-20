@@ -269,3 +269,13 @@ public void readMessage() throws IOException {
 ```
 
 Exceptions can float all the way up the chain of method  callers this way, until the system finally handles the uncaught exception.
+
+### When and When Not to Use Exceptions
+
+#### When to Use Exceptions
+
+In cases where a method throws more than one exception, you can handle each of those exceptions differently.
+
+If your method throws its own exceptions, you should declare that it throws those methdos using the `throws` statement.
+
+If you method overrides a superclass method that has a `throws` statement, you can throw the same types of checked exceptions or subclases of those exceptions; you cannot throw any different types of checked exceptions.
