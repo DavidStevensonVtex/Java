@@ -247,3 +247,25 @@ public class SunSpotException extends Exception {
     }
 }
 ```
+
+#### Combining throws, try, and throw
+
+To pass on an exception to a caller:
+
+```
+public void readMessage() throws IOException {
+    MessageReader mr = new MessageReader();
+
+    try
+    {
+        mr.loadHeader();
+    }
+    catch (IOException e) {
+        // do something to handle the 
+        // IO exception and then retrown the exception
+        throw e;
+    }
+}
+```
+
+Exceptions can float all the way up the chain of method  callers this way, until the system finally handles the uncaught exception.
