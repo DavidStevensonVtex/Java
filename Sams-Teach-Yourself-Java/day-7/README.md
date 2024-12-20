@@ -293,3 +293,8 @@ Declare only the exceptions that have a reasonably fair chance of happening and 
 #### Bad Style Using Exceptions
 
 Compiler errors regarding exceptions are there to remind you to reflect on these issues.
+
+### Threads
+
+*Threads* are parts ofthe program set up to run on their own while the rest of the program does something else. This is also called *multitasking* because the program can handle more than one task simultaneously.
+
