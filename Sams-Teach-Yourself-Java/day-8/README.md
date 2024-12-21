@@ -44,3 +44,29 @@ while (users.hasNext()) {
     System.out.println();
 }
 ```
+
+#### BitSets
+
+The `BitSet` class is useful when you need to represent a large amount of binary data - bit values that equal either 0 or 1.
+
+```
+class ConnectionAttributes {
+    public static final int READABLE = 0;
+    public static final int WRITABLE = 1;
+    public static final int STREAMABLE = 2;
+    public static final int FLEXIBLE = 3 ;
+}
+```
+
+```
+// BitSet connex = new BitSet();
+BitSet connex = new BitSet(4);
+
+connex.set(ConnectionAttributes.WRITABLE);
+connex.set(ConnectionAttributes.STREAMABLE);
+connex.set(ConnectionAttributes.FLEXIBLE);
+
+connex.clear(ConnectionAttributes.WRITABLE);
+
+boolean isWriteable = connex.get(ConnectionAttributes.WRITABLE);
+```
