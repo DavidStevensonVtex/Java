@@ -2,8 +2,6 @@
 
 import java.util.ArrayList;
 
-import java.util.Iterator;
-
 public class CodeKeeper {
     ArrayList<String> list;
     String[] codes = { "alpha", "lambda", "gamma", "delta", "zeta" };
