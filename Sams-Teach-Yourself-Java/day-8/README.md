@@ -114,3 +114,26 @@ for (Iterator i = golfer.iterator(); i.hasNext(); ) {
     System.out.println(name);
 }
 ```
+
+#### Stacks
+
+The `Stack` class in Java is implemented as a last-in, first-out stack, which means that the last item to be added to the stack is the first one to be removed.
+
+```
+Stack s = new Stack();
+s.push("One");
+s.push("Two");
+s.push("Three");
+s.push("Four");
+s.push("Five");
+s.push("Six");
+
+String s1 = (String) s.pop();
+String s2 = (String) s.pop();
+
+String s3 = (String) s.peek();
+
+int i = s.search("Two");
+
+boolean isEmpty = s.empty();
+```
