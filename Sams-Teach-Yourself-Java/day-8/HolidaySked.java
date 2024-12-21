@@ -1,6 +1,5 @@
 // Listing 8.1 The Full Text of HolidaySked.java
 
-import java.text.NumberFormat;
 import java.util.BitSet;
 
 public class HolidaySked {
