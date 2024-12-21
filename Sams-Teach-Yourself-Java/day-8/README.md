@@ -137,3 +137,23 @@ int i = s.search("Two");
 
 boolean isEmpty = s.empty();
 ```
+
+#### Map
+
+The `Map` interface defines a framework for implementing a key-mapped data structure, a place to store objects each referenced by a key.
+
+```
+Rectangle r1 = new Rectangle(0, 0, 5, 5);
+look.put("small", r1);
+Rectangle r2 = new Rectangle(0, 0, 15, 15);
+look.put("medium", r2);
+Rectangle r3 = new Rectangle(0, 0, 25, 25);
+look.put("large", r3);
+
+Rectangle r = (Rectangle) look.get("medium");
+
+look.remove("large");
+
+int size = look.size();
+```
+
