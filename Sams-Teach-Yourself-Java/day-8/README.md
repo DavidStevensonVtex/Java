@@ -180,3 +180,14 @@ The parent of all classes, Object, defines a hashCode() method overridden in mos
 Any class that defines a `hashCode()` method can be efficiently sotred and accessed in a hash map.
 A class that wants to be hashed must also implement the `equals()` method, which defines a way of telling whether two objects are equal. The `equals()` method usually just performs a straight comparison of all the member variables defined in a class.
 
+#### Generics
+
+When a data structure works with any kind of object, the Java compiler can't display a warning when the structure is being misused.
+
+You can specify the class or classes expected in a data structure using a feature of the language called *generics*.
+
+`ArrayList<Integer> zipCodes = new ArrayList<>();`
+
+`HashMap<String, Float> quality = new HashMap<>();`
+
+Generics make it easier to retrieve an object from a data structure because you don't have to use casting to convert them to the desired class.
