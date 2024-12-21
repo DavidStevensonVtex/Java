@@ -8,7 +8,7 @@ public class ComicBooks {
 
     public static void main(String[] arguments) {
         // set up hash map
-        HashMap<String,Float> quality = new HashMap<String,Float>();
+        HashMap<String,Float> quality = new HashMap<>();
         float price1 = 3.00F;
         quality.put("mint", price1);
         float price2 = 2.00F;
