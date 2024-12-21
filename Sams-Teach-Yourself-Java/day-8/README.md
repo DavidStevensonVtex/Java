@@ -31,3 +31,16 @@ The `ArrayList` class can grow as necessary to accommondate new elements and als
 The `Stack` class implements a last-in, first-out stack of elements.
 
 The `HashMap` class implements `Dictionary`, an abstract class that defines a data structure form mapping keys to values. This provides an implementation of a key-mapped data structure.
+
+#### Iterator
+
+* public boolean hasNext();
+* public Object next();
+* public void remove();
+
+```
+while (users.hasNext()) {
+    Object ob = users.next();
+    System.out.println();
+}
+```
