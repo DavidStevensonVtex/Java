@@ -104,3 +104,13 @@ int size = golfer.size();
 The Java Class LIbrary also includes `Vector`, a data structure that works a lot like array lists.
 `Vector` is obsolete.
 
+#### Looping Throw Data Structures
+
+```
+Iterator it = golfer.iterator();
+
+for (Iterator i = golfer.iterator(); i.hasNext(); ) {
+    String name = (String) i.next();
+    System.out.println(name);
+}
+```
