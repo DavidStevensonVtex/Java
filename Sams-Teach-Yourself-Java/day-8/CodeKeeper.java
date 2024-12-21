@@ -23,8 +23,13 @@ public class CodeKeeper {
         }
 
         // display all codes
-        for (Iterator<String> ite = list.iterator(); ite.hasNext(); ) {
-            String output = ite.next();
+        // for (Iterator<String> ite = list.iterator(); ite.hasNext(); ) {
+        //     String output = ite.next();
+        //     System.out.println(output);
+        // }
+
+        // A simpler way to loop over the array list
+        for (String output : list) {
             System.out.println(output);
         }
     }
