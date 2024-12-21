@@ -155,5 +155,28 @@ Rectangle r = (Rectangle) look.get("medium");
 look.remove("large");
 
 int size = look.size();
+
+boolean isEmpty = look.isEmpty();
 ```
+
+#### Hash Maps
+
+The `HashMap` class implements the `Map` interface and provides a complete implementation of a key-mapped data structure.
+
+```
+HashMap hash = new HashMap(20);
+
+HashMap = new HashMap(20, 0.5F);    // Second parameter is load factor
+
+hash.clear();
+
+Rectangle box = new Rectangle(0, 0, 5, 5);
+boolean isThere = hash.containsValue(box);
+
+boolean isThere = hash.containsKey("Small");
+```
+
+The parent of all classes, Object, defines a hashCode() method overridden in most standard Java classes.
+Any class that defines a `hashCode()` method can be efficiently sotred and accessed in a hash map.
+A class that wants to be hashed must also implement the `equals()` method, which defines a way of telling whether two objects are equal. The `equals()` method usually just performs a straight comparison of all the member variables defined in a class.
 
