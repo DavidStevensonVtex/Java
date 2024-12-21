@@ -70,3 +70,37 @@ connex.clear(ConnectionAttributes.WRITABLE);
 
 boolean isWriteable = connex.get(ConnectionAttributes.WRITABLE);
 ```
+
+#### ArrayLists
+
+The `ArrayList` class implements and expandible and contractible array of objects.
+
+```
+ArrayList golfer = new ArrayList();
+ArrayList golfer = new ArrayList(30);
+
+golfer.add("Tseng");
+golfer.add("Lewis");
+golfer.add("Stanford");
+
+String s1 = (String) golfer.get(0);
+String s2 = (String) golfer.get(2);
+
+golfer.add(1, "Myazato);
+golfer.add(0, "Kerr");
+golfer.remove(3);
+
+golfer.clear();
+
+boolean isThere = golfer.contains("Webb");
+
+int i = golfer.indexOf("Stanford");
+
+golfer.remove("Kung");
+
+int size = golfer.size();
+```
+
+The Java Class LIbrary also includes `Vector`, a data structure that works a lot like array lists.
+`Vector` is obsolete.
+
