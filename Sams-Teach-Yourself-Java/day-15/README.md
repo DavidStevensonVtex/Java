@@ -152,3 +152,32 @@ As an alternative, you c an wait for an EOFException (end-of-file exception) to 
 
 Character streams are used to work with any text represented by the ASCII character set or Unicode, an international character set that includes ASCII.
 
+#### Reading Text Files
+
+* `FileReader` inherits from `InputStreamReader`, which reads a byte stream and convertes the bytes into integer values that represent Unicode characters.
+
+`FileReader look = new FileReader("index.txt");`
+
+* `read()` returns the next character on the stream as an integer
+* `read(char[], int, int)` reads characters into the specifed character array with the indicating starting point and the number of characters to read.
+
+```
+FileReader text = new FileReader("readme.txt");
+int inByte;
+do {
+    inByte = text.read();
+    if (inByte != -1) {
+        if (inByte != -1) {
+            System.out.print((char) inByte);
+        }
+    }
+}
+while (inByte != -1) ;
+System.out.println("");
+text.close();
+```
+
+The `BufferedReader` class reads a character input stream and buffers it for better efficiency. You must have an existing `Reader` object of some kind to create a buffered version.
+
+* `Bufferedread(Reader)`
+* `BufferedReader(Reader, int)` - buffer of `size` *int*
