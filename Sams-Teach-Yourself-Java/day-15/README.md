@@ -148,3 +148,7 @@ A data input stream's different read methods do not all return a value that can 
 
 As an alternative, you c an wait for an EOFException (end-of-file exception) to be thrown when a read method reaches the end of the stream.
 
+### Character Streams
+
+Character streams are used to work with any text represented by the ASCII character set or Unicode, an international character set that includes ASCII.
+
