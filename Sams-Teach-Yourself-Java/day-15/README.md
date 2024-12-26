@@ -94,3 +94,10 @@ the `FileOutputStream(String, boolean)` constructor.
 The file output stream's `write(int)` method is used to write bytes to the stream.
 
 To write more than one byte, you can use the `write(byte[], int, int) method
+
+### Filtering a Stream
+
+Filtered streams are sterams that modify the information sent through an existing stream.
+
+* `FilterInputStream`
+* `FilterOutputStream`
