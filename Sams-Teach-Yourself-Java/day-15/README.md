@@ -125,3 +125,26 @@ Buffers are essential when reading extremely large files. Without them, the data
 The `System` class, part of the `java.lang` package, has a class variable called `in` that is an InputStream object.
 
 `BufferedInputStream command = new BufferedInputStream(System.in);`
+
+##### Data Streams
+
+The following primitive types can be directly read from or written to a data stream: 
+`boolean, byte, double, float, int, long` and `short`.
+
+A data input stream is created the `DataInputStream(InputStream) constructor.
+
+A data output stream requires the `DataOutputStream(OutputStream)` constructor.
+
+* `readBoolean(), writeBoolean(boolean)`
+* `readByte(), writebyte(integer)`
+* `readDouble(), writeDouble(double)`
+* `readFloat(), writeFloat(float)`
+* `readInt(), writeInt(int)`
+* `readLong(), writeLong(long)`
+* `readShort(), writeShort(int)`
+* `readUnsignedShort(), writeUnsignedShort(int)`
+
+A data input stream's different read methods do not all return a value that can be used to indicate the end of the stream has been reached.
+
+As an alternative, you c an wait for an EOFException (end-of-file exception) to be thrown when a read method reaches the end of the stream.
+
