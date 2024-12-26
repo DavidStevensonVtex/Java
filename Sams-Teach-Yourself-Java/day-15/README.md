@@ -181,3 +181,28 @@ The `BufferedReader` class reads a character input stream and buffers it for bet
 
 * `Bufferedread(Reader)`
 * `BufferedReader(Reader, int)` - buffer of `size` *int*
+
+#### Writing Text Files
+
+The `FileWriter` colass is a subclass of `OutputStreamWriter`, which has behavior to convert Unicode character codes to bytes.
+
+There are two FileWriter constructors: `FileWriter(String)` and `FileWriter(String, boolean)`.
+
+`FileWriter` methods:
+
+* `write(int)`
+* `write(char[], int, int)`
+* `write(String, int, int)`
+
+```
+FileWriter letters = new FileWriter("alphabet.txt");
+for (int i = 65; i < 91; i++ )
+    letters.write((char) i);
+letters.close();
+```
+
+`BufferedWriter` constructors:
+
+* `BufferWriter(writer)`
+* `BufferedWriter(Writer, int)` - int represents the size of the buffer
+* newLin()
