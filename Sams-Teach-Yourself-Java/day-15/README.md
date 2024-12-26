@@ -19,3 +19,14 @@ Character streams handle only textual data.
 * `FileInputStream` - `read()` method returns a byte read from the file
 * `BufferedWriter` - `write()` method writes a character to the file
 * `close()` method closes a file stream
+
+#### Filtering a Stream
+
+A *filter* is a type of stream that modifies how an existing stream is handled.
+
+The procedure for using a filter on a stream is as follows:
+
+1. Create a stream associated with a data source or data destination.
+2. Associate a filter with that stream
+3. Read data from or write data to the filter rather than the original stream.
+
