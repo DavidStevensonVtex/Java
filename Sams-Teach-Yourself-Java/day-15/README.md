@@ -49,3 +49,37 @@ All byte streams are a subclass of either `InputStream` or `OutputStream`.
 
 File Streams are byte streams.
 
+##### File Input Streams
+
+A file input stream can be created with the `new FileInputStream(String)` constructor.
+
+`FileInputStream fs = new FileInputStream("scores.dat");`
+
+Path references can be indicated in a manner specific to a platform.
+
+`FileInputStream f1 = newFileInputStream("\\data\\calendar.txt");`
+
+This is a Linux example:
+
+`FileInputStream f2 = new FileInputStream("/data/calendar.txt");`
+
+```
+char sep = File.separator;
+FileInputStream f2 = new FileInputStream(sep + "data" + sep + "calendar.txt");
+```
+
+If the method returns -1, which is not a possible byte value, this signifies that the end of the file stream has been reached. (bytes are returned as an integer. Expected values are 0-255 and -1).
+
+To read more than one byte of data: `read(byte[], int, int)`
+
+* A byte array wheret the data will be stored.
+* The element inside the array where the data's first byte should be stored
+* The number of bytes to read.
+
+```
+int newByte = 0;
+while (newByte != -1) {
+    newByte = diskfile.read();
+    System.out.print(newByte + " ");
+}
+```
