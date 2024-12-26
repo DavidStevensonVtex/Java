@@ -10,3 +10,12 @@ Two types of streams:
 * character streams
 
 Character streams handle only textual data.
+
+#### Using a Stream
+
+* `java.io`
+* `java.nio.file`
+
+* `FileInputStream` - `read()` method returns a byte read from the file
+* `BufferedWriter` - `write()` method writes a character to the file
+* `close()` method closes a file stream
