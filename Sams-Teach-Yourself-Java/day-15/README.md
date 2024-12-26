@@ -30,3 +30,10 @@ The procedure for using a filter on a stream is as follows:
 2. Associate a filter with that stream
 3. Read data from or write data to the filter rather than the original stream.
 
+#### Handling Exceptions
+
+Exceptions in the `java.io` package:
+
+* `FileNotFoundException`
+* `EOFException`
+* The above are subclasses of the `IOException` class
