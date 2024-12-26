@@ -120,6 +120,8 @@ Buffers are essential when reading extremely large files. Without them, the data
 * `BufferedOutputStream(OutputStream, int)`
 * `write(byte[], int, int)`
 
+##### Console Input Streams
 
-  
+The `System` class, part of the `java.lang` package, has a class variable called `in` that is an InputStream object.
 
+`BufferedInputStream command = new BufferedInputStream(System.in);`
