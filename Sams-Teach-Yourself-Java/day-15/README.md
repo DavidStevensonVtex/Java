@@ -83,3 +83,14 @@ while (newByte != -1) {
     System.out.print(newByte + " ");
 }
 ```
+
+##### File Output Streams
+
+A file output stream can be created with the `FileOutputStream(String)` constructor.
+
+You7 can create a file output stream that appends data fter the end of an existing file with
+the `FileOutputStream(String, boolean)` constructor.
+
+The file output stream's `write(int)` method is used to write bytes to the stream.
+
+To write more than one byte, you can use the `write(byte[], int, int) method
