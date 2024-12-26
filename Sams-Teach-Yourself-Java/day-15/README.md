@@ -206,3 +206,24 @@ letters.close();
 * `BufferWriter(writer)`
 * `BufferedWriter(Writer, int)` - int represents the size of the buffer
 * newLin()
+
+### Files and Paths
+
+If you want to copy or rename files or handle other tasks, you can use a `Path` object from the `java.nio.file` package.
+
+`Path` represents a file or folder reference. It is an improvement on the `File` class in the `java.io` package.
+
+`Path source = FileSystems.getDefault().getPath("essay.txt");`
+
+A `File` object can be created from a `Path` by calling the `toFile()` method of the Path class instance.
+
+`File sourcefile = source.toFile()`
+
+A `Path` object can be created from a `File` by calling its `toPath()` method.
+
+The `move(Path, Path)` class method renames a file from the first path argument to the second.
+
+The `delete(Path) class method deletes that file.
+
+The methods throw a `SecurityException` if the program does not have the se curity to perform the file operation in question.
+
