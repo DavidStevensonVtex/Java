@@ -37,3 +37,10 @@ Exceptions in the `java.io` package:
 * `FileNotFoundException`
 * `EOFException`
 * The above are subclasses of the `IOException` class
+
+### Byte Streams
+
+All byte streams are a subclass of either `InputStream` or `OutputStream`.
+
+* `FileInputStream` and `FileOutputStream` are byte streams stoerd in files on disk, CD-ROM or other storage devices.
+* `DataInputStream` and `DataOutputStream` are filtered byte streams where data such as integers and floating-point numbers can be read.
