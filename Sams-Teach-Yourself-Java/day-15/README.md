@@ -109,3 +109,17 @@ Information is delivered more quickly if it can be sent in large chunks, even if
 A *buffer* is a storage place where data can be kept before it is needed by a program that reads or writes that data. By using a buffer, you can get data without always going back to the original source of the data.
 
 Buffers are essential when reading extremely large files. Without them, the data from the file could take up all of a Java virtual machine's memory
+
+##### Buffered Streams
+
+* `BufferedInputStream(InputStream)`
+* `BufferedInputStream(InputStream, int)`
+* `read(byte[], int, int)
+
+* `BufferedOutptuStream(OutputStream)`
+* `BufferedOutputStream(OutputStream, int)`
+* `write(byte[], int, int)`
+
+
+  
+
