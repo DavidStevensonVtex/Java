@@ -101,3 +101,11 @@ Filtered streams are sterams that modify the information sent through an existin
 
 * `FilterInputStream`
 * `FilterOutputStream`
+
+#### Byte Filters
+
+Information is delivered more quickly if it can be sent in large chunks, even if those chunks are received faster than they can be handled.
+
+A *buffer* is a storage place where data can be kept before it is needed by a program that reads or writes that data. By using a buffer, you can get data without always going back to the original source of the data.
+
+Buffers are essential when reading extremely large files. Without them, the data from the file could take up all of a Java virtual machine's memory
