@@ -44,3 +44,8 @@ All byte streams are a subclass of either `InputStream` or `OutputStream`.
 
 * `FileInputStream` and `FileOutputStream` are byte streams stoerd in files on disk, CD-ROM or other storage devices.
 * `DataInputStream` and `DataOutputStream` are filtered byte streams where data such as integers and floating-point numbers can be read.
+
+#### File Streams
+
+File Streams are byte streams.
+
