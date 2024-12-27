@@ -224,3 +224,5 @@ Constructor c = kc.getConstructor(cons);
 ```
 
 The `getConstructor(Class[])` method throws a `NoSuchMethodException` if there isn't a constructor with arguments that match the `Class[]` array.
+
+#### Inspecting a Class
