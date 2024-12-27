@@ -99,3 +99,14 @@ FileInputStream methods:
 
 Each of these methods throws an `IOException` if an input/output error occurs as the stream is being read.
 
+#### Transient Variables
+
+When you create an object that can be serialized, one design consideration is whether all the object's instance variables should be saved.
+
+It's a good idea to exclude from serialization a variable that contains sensitive information, like passwords.
+
+A third reason not to serialize a variable is to save space on the storage file that holds the object.
+
+To prevent an instance variable from being included in serialization, the `transient` modifer is used.
+
+`public transient int limit = 55;`
