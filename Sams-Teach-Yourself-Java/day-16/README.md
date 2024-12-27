@@ -140,3 +140,18 @@ private void readObject(ObjectInputStream ois)
     }
 }
 ```
+
+### Inspecting Classes and Methods with Reflection
+
+Every object in Java inherits the `getClass()` method, which identifies that object's class or interface.
+
+```
+Class keyClass = key.getClass();
+String keyName = keyClass.getName();
+```
+
+These featuers are part of Java's support for reflection, a technique that enables one Java class - such as a program you write - to learn details about another class.
+
+One use of reflection is to determine a serialized object's class when it is read.
+
+
