@@ -184,3 +184,43 @@ The `newInstance()` method throws several kinds of exceptions:
 * IllegalAccessException
 * InstantiationException - You cannot create a new object because the class is abstract.
 * SecurityException
+
+#### Working with Each Part of a Class
+
+Although `Class` is part of the `java.lang` package, the primary support for reflection is the `java.lang.reflect` package, which includes the following classes:
+
+* Field
+* Method
+* Constructor
+* Array
+* Modifer
+
+Each of these reflectin classes has methods for workign with an element of a class.
+
+The `Method` class has several useful instance methods:
+
+* getParameterTypes()
+* getReturnType()
+* getModifiers()
+
+```
+int mods = current.getModifiers();
+System.out.println(Modifier.toString(mods));
+```
+
+The `Constructor` clas:
+
+* getModifiers()
+* getName()
+
+For example, if there is a KeyClass(String, int) constructor:
+
+```
+Class kc = KeyClass.class;
+Class[] cons = new Class[2];
+cons[0] = String.class;
+cons[1] = int.class;
+Constructor c = kc.getConstructor(cons);
+```
+
+The `getConstructor(Class[])` method throws a `NoSuchMethodException` if there isn't a constructor with arguments that match the `Class[]` array.
