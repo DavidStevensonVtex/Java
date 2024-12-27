@@ -61,4 +61,41 @@ Methods:
 
 The `ObjectOutputStream` can throw `IOException` errors.
 
+#### Object Input Streams
+
+An object is read from a stream using the `ObjectInputStream` class.
+
+An object input stream is created with the `ObjectInputStream(InputStream)` constructor.
+This constructor throws four exceptiosn: IOException, StreamCorruptionException, SecurityException, and NullPointerException.
+
+```
+try {
+    FileInputStream disk = new FileInputStream("SavedObject.dat");
+    ObjectInputStream obj = new ObjectInputStream(disk);
+    WorkData dd = (WorkData) disk.readObject();
+}
+catch (IOException ie) {
+    System.out.println("IO error -- " + ie.toString());
+}
+```
+
+The `readObject()`method can throw IOException, OptionalDataException, ClassNotFoundException, and InvalidClassException errors.
+
+FileInputStream methods:
+
+* read()
+* read(byte[], int, int)
+* readBoolean()
+* readByte()
+* readChar()
+* readDouble()
+* readFloat()
+* readInt()
+* readLine()
+* readLong()
+* readShort()
+* readUnsignedByte()
+* readUnsignedShort()
+
+Each of these methods throws an `IOException` if an input/output error occurs as the stream is being read.
 

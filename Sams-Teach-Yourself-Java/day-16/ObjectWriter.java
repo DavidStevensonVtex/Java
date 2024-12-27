@@ -20,6 +20,7 @@ public class ObjectWriter {
             ObjectOutputStream oo = new ObjectOutputStream(fo);
         ) {
             oo.writeObject(mess);
+            System.out.println("Object created successfully.");
         }
         catch (IOException e) {
             System.out.println("Error -- " + e.toString());
