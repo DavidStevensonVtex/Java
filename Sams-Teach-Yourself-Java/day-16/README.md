@@ -110,3 +110,33 @@ A third reason not to serialize a variable is to save space on the storage file 
 To prevent an instance variable from being included in serialization, the `transient` modifer is used.
 
 `public transient int limit = 55;`
+
+#### Checking an Object's Serialized Fields
+
+An important thing to consider when serializing objects is how easily a malicious programmer could tamper with an object in serial form.
+
+When you re-create an object from its serial form, you can't rely on a constructor method to ensure that its fields have permissible values.
+
+Instead, if you want to check that an object read from a stream contains acceptable values, the object can include a `readObject(ObjectInputStream)` method.
+
+This method throws `IOException` and `ClassNotFoundException` errors and takes the following form:
+
+```
+private void readObject(ObjectInputStream ois) {
+    ois.defaultReadObject();
+}
+```
+
+Note that it is `private`.
+
+The following method could be added to the Message class to reject a serialized object that has an empty from value:
+
+```
+private void readObject(ObjectInputStream ois) 
+    throws IOException, ClassNotFoundException {
+    ois.defaultReadObject();
+    if (from.length() < 1) {
+        throw new IOException("Null sender in message.");
+    }
+}
+```
