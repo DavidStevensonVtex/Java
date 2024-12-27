@@ -1,3 +1,32 @@
 # Sams Teach Yourself Java in 21 Days
 
 ## Day 16: Serializing and Examining Objects
+
+* Object serialization, the ability to read and write an object using streams
+* Reflection, in which one object can learn details about another object
+
+### Object Serialization
+
+A *stream* is an object that carries data from one place to another.
+
+Two types of streams were introduced during Day 15:
+
+* Byte streams
+* Character streams
+
+A third type of stream, an *object stream*, makes it possible for data to be represented as objects rather than as some external form.
+
+Object streams, such as byte and character streams, are part of the `java.io` package.
+
+For an object to be saved to a destination such as a disk fiel, it must be converted to serial form.
+
+When you implement the `Serializable` interface, an object indicates that it can be used with streams.
+This interface does not contain any methods that must be included in the classes that implement it.
+The sole purpose of the `Serializable` interface is to indicate that objects can be stored and 
+retrieved in serial form.
+
+A programming concept involved in object serialization is *persistence* - an object's capability to exist and function outside the program that created it.
+
+When several objects contain references to the same object, Java automatically ensures that only one copy of that object is serialized.
+
+Some of the object's variables can be omitted from serialization using the `transient` modifier.
