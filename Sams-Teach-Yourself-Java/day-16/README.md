@@ -154,4 +154,33 @@ These featuers are part of Java's support for reflection, a technique that enabl
 
 One use of reflection is to determine a serialized object's class when it is read.
 
+#### Inspecting and Creating Classes
 
+The `Class` class, which is part of the `java.lang` package, is used to learn about and create classes, interfaces, and even primitive types.
+
+In addition to using `getClass()`, you can create `Class` objects by appending .class to the name of a class, interface, or primitive type, as in the following examples.
+
+```
+Class keyClass = KeyClass.class ;
+Class thr = Throwable.class;
+Class floater = float.class;
+Class floatArray = float[].class;
+```
+
+You also can create `Class` objects by using the `forName() class method with a single argument: a string containing the name of an existing class.
+
+`Class lab = Class.forName("javax.swing.JLabel");`
+
+The `forName()` method throws a `ClassNotFoundException` if the specified class cannot be found.
+
+Class objects that represent arrays are handled a little differently when `getName()` is called on them.
+
+You can also use the `Class` class to create new objects using the `newInstance() method.
+
+`Throwable thr2 = (Throwable) thr.newInstance()`
+
+The `newInstance()` method throws several kinds of exceptions:
+
+* IllegalAccessException
+* InstantiationException - You cannot create a new object because the class is abstract.
+* SecurityException
