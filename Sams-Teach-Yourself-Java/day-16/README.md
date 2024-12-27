@@ -30,3 +30,35 @@ A programming concept involved in object serialization is *persistence* - an obj
 When several objects contain references to the same object, Java automatically ensures that only one copy of that object is serialized.
 
 Some of the object's variables can be omitted from serialization using the `transient` modifier.
+
+#### Object Output Streams
+
+An object is written to a stream via the `ObjectOutputStream` class.
+
+An object output stream is created with the `ObjectOutputStream(OutputStream)` constructor.
+
+```
+FileOutputStream disk = new FileOutputStream("SavedObject.dat");
+ObjectOutputStream disko = new ObjectOutputStream(disk);
+disko.writeObject(userData);
+```
+
+Methods:
+
+* `write(int)`
+* `write(byte[])`
+* `write(byte[], int, int)`
+* `writeBoolean(boolean)`
+* `writeByte(int)`
+* `writeBytes(String)`
+* `writeChar(int)`
+* `writeChars(String)`
+* `writeDouble(double)`
+* `writeFloat(float)`
+* `writeInt(int)`
+* `writeLong(long)`
+* `writeShort(short)`
+
+The `ObjectOutputStream` can throw `IOException` errors.
+
+
