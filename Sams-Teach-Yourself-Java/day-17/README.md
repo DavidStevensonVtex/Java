@@ -113,3 +113,53 @@ Two related packages:
 * java.nio.channels
 * java.nio.charset
 
+#### Buffers
+
+Buffers are objects that represent data streams stored in memory.
+
+Buffers often are used to improve the performance of programs that read input or write output. They enable a program to put a lot of data in memory, where it can be read, writen, and modified more quickly.
+
+* ByteBuffer
+* CharBuffer
+* DoubleBuffer
+* FloatBuffer
+* IntBuffer
+* LongBuffer
+* ShortBuffer
+
+```
+int[] temperatures = { 90, 85, 87, 78, 80, 75, 70, 79, 85, 92, 99 };
+IntBuffer tempBuffer = IntBuffer.wrap(temperatures);
+for (int i = 0; tempBuffer.remaining() > 0 ; i++ )
+    System.out.println(tempBuffer.get());
+```
+
+Another way to create a buffer is to set up an empty buffer and then put data in it.
+To create the buffer, call the static method `allocate(int)` of the desired buffer c lass with the size of the buffer as an argument.
+
+* put(int)
+* put(int, int) - stores an integer (second arg) at a specific position in the buffer (first arg)
+* put(int[])
+* put(int[], int, int)
+* put(IntBuffer)
+
+
+Call the `position(int)` method to change the position tot he argument specified as an integer.
+
+Another important position to track when using buffers is the limit -- thelast place in the buffer that contains data.
+
+It isn't necessary to figure out the limit when the buffer is always full; in that case, you know the buffer's last position has something in it.
+
+```
+int[] temps = { 90, 85, 87, 78, 80, 75, 70, 79, 85, 92, 99 };
+IntBuffer tempBuffer = IntBuffer.allocate(temps.length);
+for (int i = 0; i < temps.length ; i++) {
+    float celsius = ((float) temps[i] - 32) / 9 * 5;
+    tempBuffer.put((Int) celsius);
+}
+
+tempBuffer.position(0);
+for ( int i = 0 ; tempBuffer.remaining() > 0 ; i++ ) {
+    System.out.println(tempBuffer.get());
+}
+```
