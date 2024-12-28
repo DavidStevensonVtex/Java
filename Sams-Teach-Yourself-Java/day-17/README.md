@@ -44,3 +44,40 @@ try {
     System.out.println("Bad URL");
 }
 ```
+
+`HttpUrlConnection` class methods:
+
+* getHeaderFile(int)
+* getHeaderFieldKey(int)
+* getResponseCode()
+* getResponseMessage()
+* getContentType()
+* setFollowRedirects(boolean)
+
+#### Sockets
+
+Java provides the `Socket` and `SererSocket` classes as an abstraction of standard Transmission Control Protocol (TCP) socket programming techniques.
+
+```
+Socket connection = new Socket(hostname, portNumber);
+connection.setSotimeOut(50000);
+```
+
+If you don't set a time-out in a program that uses sockets, it might hang indefinitely, waiting for data.
+
+```
+BufferedInputStream bis = new BufferedInputStream(connection.getInputStream());
+DataInputStream in = new DataInputStream(bis);
+
+BufferedOutputStream bos = new BufferedOutputStream(connection.getOutputStream());
+DataOutputStream out = new DataOutputStream(bos);
+```
+
+```
+DataInputStream in = new DataInputStream(new BufferedInputSteram(sock.getInputStream()));
+connection.close();
+```
+
+Socket programming can be used for many services delivered using TCP/IP networkign, including telnet, Simple Mail Transfer Protocol (SMTP) for incoming mail, Network News Transfer Protocol for Usenet news, and finger.
+
+The last of these, finger, is a protocol for asking a system about one of its users. By setting up a finger server, a system administrator enables an Internet-connected machine to answer requests for user information. finger has fallen into disuse because of security concerns.
