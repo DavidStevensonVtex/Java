@@ -102,3 +102,6 @@ The problem with this mechanism is that although it works for simple cases, it p
 
 Because the `Socket` and `ServerSocket` classes are not final, you can create subclasses of these classes that use either the default socket implementation or your own implementation. This allows much more flexible network capabilities.
 
+##### Designing a Server Application
+
+Port 4415 was chosen arbitrarily for this project, but it could be any number from 1024 to 65,535.
