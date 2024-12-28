@@ -81,3 +81,24 @@ connection.close();
 Socket programming can be used for many services delivered using TCP/IP networkign, including telnet, Simple Mail Transfer Protocol (SMTP) for incoming mail, Network News Transfer Protocol for Usenet news, and finger.
 
 The last of these, finger, is a protocol for asking a system about one of its users. By setting up a finger server, a system administrator enables an Internet-connected machine to answer requests for user information. finger has fallen into disuse because of security concerns.
+
+
+#### Socket Servers
+
+Server-side sockets work simiilarly to client sockets, with the exception of the accept() method.
+A server socket listens on a TCP port for a connection from a client; when a client connects to that
+port, the `accept()` method accepts a connection from that client.
+By using both client and server sockets, you can create applications that communicate with each other over the network.
+
+`ServerSocket servo = new ServerSocket(8888);`
+
+Hse tbe `accept()`  method to listen on that port (and to accept a connection from any clients if one is made):
+
+`servo.accept()`
+
+To extend the behavior of the socket classes -- for example to allow network connectiosn to work accross a firewall or proxy -- you can use the abstract class `SocketImpl` and the interface `SocketImplFactory` to create a new transport-layer socket implementation.
+
+The problem with this mechanism is that although it works for simple cases, it prevents you from adding other protocols on top of TCP and from having multiple socket implementatiosn for each Java runtime.
+
+Because the `Socket` and `ServerSocket` classes are not final, you can create subclasses of these classes that use either the default socket implementation or your own implementation. This allows much more flexible network capabilities.
+
