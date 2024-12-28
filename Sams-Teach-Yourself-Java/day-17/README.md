@@ -105,3 +105,11 @@ Because the `Socket` and `ServerSocket` classes are not final, you can create su
 ##### Designing a Server Application
 
 Port 4415 was chosen arbitrarily for this project, but it could be any number from 1024 to 65,535.
+
+### The `java.nio` Package
+
+Two related packages:
+
+* java.nio.channels
+* java.nio.charset
+
