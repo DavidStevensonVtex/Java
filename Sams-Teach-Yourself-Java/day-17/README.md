@@ -235,3 +235,21 @@ catch (FileNotFoundException fne) {
     System.out.println(fne.getMessage())
 }
 ```
+
+##### Network Channels
+
+A popular fearture of the java.nio package is its support for nonblocking input and output over a networking connection.
+
+In Java, blocking refers to a statement that must complete execution before anything else happens in the program.
+
+Connections can be broken. A server could go offline. A socket connection could appear to be stalled because a blocked statement is waiting for something to happen.
+
+With the java.nio package, you can create networking c onnections and read to and write from them using non-blocking methods.
+
+* Associate a socket channel with an input or output stream.
+* Configure the channel to recognize the kind of networking events you want to monitor, such as new connections, attempts to read data over the chanell, and attempts to write data.
+* Call a method to open the channel.
+* Because the method is nonblocking, the program continues executing so that you can handle other tasks.
+* If one of the networkign events you are monitoring takes place, your program is notified - a method associated with the event is called.
+
+To use nonblocking input and output, you must work with channels instead of streams.
