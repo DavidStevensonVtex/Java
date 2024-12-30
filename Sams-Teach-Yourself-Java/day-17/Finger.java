@@ -72,3 +72,14 @@ public class Finger {
 // .plan archives for this user: finger icculus?listarchives=1@icculus.org
 // Powered by IcculusFinger v2.1.27 (https://icculus.org/IcculusFinger/)
 // Stick it in the camel and go.
+
+// Output using FingerServer.java:
+
+// $ java Finger dstevenson@localhost
+// Nio Finger Server
+
+// User name: dstevenson
+
+// Plan for David Stevenson:
+
+// The plan is the plan until the plan changes.
