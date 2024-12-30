@@ -180,3 +180,27 @@ for ( int i = 0 ; tempBuffer.remaining() > 0 ; i++ ) {
 * getLong()
 * getShort()
 
+#### Character Sets
+
+Character sets are a set of clases used to convert between byte buffers and character buffers.
+
+* CharSet - Unicode character set
+* CharSetDecoder - transforms a series of bytes into a series of characters
+* CharsetEncoder - transforms a set of characters into a series of bytes
+
+Java support six character encodings:
+
+* US-ASCII
+* ISO-8859-1 256-character ISO Latin Alphabet No. 1
+* UTF-8 
+* UTF-16BE - Unicode Big Endian
+* UTF-16LE - Unicode Little Endian
+* UTF-16 - Unicode - 16 bit characters, using an optional byte-order mark
+
+```
+Charset isoset = Charset.forName("ISO-8859-1");
+CharsetDecoder decoder = set.newDecoder();
+netBuffer.position(0)
+CharBuffer netText = decoder.decode(netBuffer);
+`
+
