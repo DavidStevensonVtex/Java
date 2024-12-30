@@ -253,3 +253,31 @@ With the java.nio package, you can create networking c onnections and read to an
 * If one of the networkign events you are monitoring takes place, your program is notified - a method associated with the event is called.
 
 To use nonblocking input and output, you must work with channels instead of streams.
+
+###### Nonblocking Socket Clients and Servers
+
+1. Create an object that repesents the Internet address to which you are connecting. java.net.InetSocketAddress
+2. InetSocketAddress(string hostName, int portNumber)
+3. Alternatively, if server is identified by its IP address: InetAddress.getByName(String ipAddress)
+4. Nonblocking connections require a socket channels. java.nio.SocketChannel
+5. A socket channel can be configured for blocking or nonblocking communication. channel.configureBlocking(boolean)
+6. channel.connect(InetSocketAddress)
+7. On a blocking channel, the connect() method attempts to establist a connection to the server and waits for it to complete.
+8. On a nonblocking channel, the connect() method returns immediately with a value of false. You must use a channel-listeing object called a Selector. A Selector is an object that keeps track of things that happen to a docket channel (or another channel in the package that is a subclass of SelectableChannel).
+9. To create a selector, call its open() method: `Selector monitor = Selector.open();`
+10. When you use a Selector, you must indicate the events you want to monitor. channel.register(Selector, int, Object)
+    a. The int value represents the events being monitored.
+    b. An Object that can be delivered along with the key, or null otherwise.
+
+```
+Selector spy = Selector.open();
+channel.register(spy, SelectionKey.OP_READ, null);
+```
+
+```
+Selector spy = Selector.open();
+channel.register(spy, SelectionKey.OP_READ + SelectionKey.OP_WRITE, null);
+```
+
+You wait for events by calling the selector's select() or select(long) methods.
+
