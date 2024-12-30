@@ -163,3 +163,20 @@ for ( int i = 0 ; tempBuffer.remaining() > 0 ; i++ ) {
     System.out.println(tempBuffer.get());
 }
 ```
+
+#### Byte Buffers
+
+* putChar(char) - stores 2 bytes
+* putDouble(double) - stores 8 bytes
+* putFloat(float) - stoers 4 bytes
+* putInt(int) - stores 4 bytes
+* putLong(long) - stores 8 bytes
+* putShort(short) - stores 2 bytes
+
+* getChar()
+* getDouble()
+* getFloat()
+* getInt()
+* getLong()
+* getShort()
+
