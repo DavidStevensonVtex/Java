@@ -202,7 +202,7 @@ Charset isoset = Charset.forName("ISO-8859-1");
 CharsetDecoder decoder = set.newDecoder();
 netBuffer.position(0)
 CharBuffer netText = decoder.decode(netBuffer);
-`
+```
 
 #### Channels
 
