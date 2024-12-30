@@ -204,3 +204,34 @@ netBuffer.position(0)
 CharBuffer netText = decoder.decode(netBuffer);
 `
 
+#### Channels
+
+A common use for a buffer is to associate it with an input or output stream. You can fill a buffer with data from an input stream or write a buffer to an output stream.
+
+To do this, you must use a channel -- an object that connects a buffer to the stream.
+Channels are part of the `java.nio.channels` package.
+
+You can associate channels with a stream by calling the getChannel() method available in some of the stream classes in the java.io package.
+
+The `FileInputStream` and `FileOutputStream` classes have getChannel() methods that return a FileChannel object. This file channel can be used to read, write, and modify the data in the file.
+
+After you have created the file channel, you can find out how many bytes the file contains by calling its size() method. This is necessary if you want to create a byte buffer to hold the file's contents.
+
+```
+try {
+    Sting source = "prices.dat";
+    FileInputStream inSource = new FileInputStream(source);
+    FileChannel inChannel = inSource.getChannel();
+
+    long inSize = inChannel.size();
+    ByteBuffer data = ByteBuffer.allocate( (int) inSize);
+    inChannel.read(data, 0);
+    data.position(0);
+    for (int i = 0 ; data.remaining() > 0; i++ ) {
+        System.out.print(data.get() + " ");
+    }
+}
+catch (FileNotFoundException fne) {
+    System.out.println(fne.getMessage())
+}
+```
