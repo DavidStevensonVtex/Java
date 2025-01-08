@@ -38,3 +38,41 @@ export CLASSPATH=$DERBY_INSTALL/lib/derby.jar:$DERBY_INSTALL/lib/derbytools.jar:
 ```
 
 java org.apache.derby.tools.sysinfo
+
+#### Examining a Database
+
+```
+dstevenson@dstevensonlinux1:/bin$ ll $DERBY_INSTALL/bin/*start*
+-rwxr-xr-x 1 root root 5868 Feb  4  2020 /opt/Apache/db-derby-10.15.2.0-bin/bin/startNetworkServer*
+-rwxr-xr-x 1 root root 1397 Jan  6  2019 /opt/Apache/db-derby-10.15.2.0-bin/bin/startNetworkServer.bat*
+```
+
+```
+$ sudo $DERBY_INSTALL/bin/startNetworkServer
+Wed Jan 08 16:21:25 EST 2025 : Security manager installed using the Basic server security policy.
+Wed Jan 08 16:21:25 EST 2025 : Apache Derby Network Server - 10.15.2.0 - (1873585) started and ready to accept connections on port 1527
+```
+
+[DerbyDB Tools](https://www.baeldung.com/java-apache-derby)
+
+Tool for performing queries:
+
+```
+$DERBY_INSTALL/bin/ij
+ij version 10.15
+ij> 
+```
+
+```
+dstevenson@dstevensonlinux1:~$ java org.apache.derby.tools.ij
+ij version 10.15
+ij> connect 'jdbc:derby:sample;create=true';
+ij> SELECT * FROM SYS.SYSTABLES ;
+TABLEID                             |TABLENAME                                                                                                                       |&|SCHEMAID                            |&
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+80000010-00d0-fd77-3ed8-000a0a0b1900|SYSCONGLOMERATES                                                                                                                |S|8000000d-00d0-fd77-3ed8-000a0a0b1900|R
+80000018-00d0-fd77-3ed8-000a0a0b1900|SYSTABLES      
+```
+
+* [DerbyDB Tutorial](https://db.apache.org/derby/papers/DerbyTut/index.html)
+* [IJ Intro](https://db.apache.org/derby/papers/DerbyTut/ij_intro.html)
